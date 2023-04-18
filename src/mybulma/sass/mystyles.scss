@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+// brand colors
+
+$orange: #ff851b;
+$green: #2ecc40;
+
+$primary: $orange;
+$secondary: $green;
+
+// other colors
+
+$pink: #e9a0a0;
+$purple: #b10dc9;
+$peach: #f6c492;
+
+.has-text-secondary {
+    color: $secondary;
+}
+
+// font
+
+$family-primary: Georgia, 'Times New Roman', Times, serif;
+
+// go to Top
+#top {
+    position: fixed;
+    right: 5px;
+    bottom: 25px;
+    z-index: 1;
+}
+
+
+// nav
+
+.navbar {
+    border-bottom: 5px solid $green;
+}
+
+a.navbar-burger {
+    height: auto;
+}
+
+@media screen and (max-width: 1023px) {
+
+    a.navbar-item:focus,
+    a.navbar-item:focus-within,
+    a.navbar-item:hover,
+    a.navbar-item.is-active,
+    .navbar-link:focus,
+    .navbar-link:focus-within,
+    .navbar-link:hover,
+    .navbar-link.is-active {
+        color: initial !important;
+
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    .navbar.is-black .navbar-end>a.is-active p {
+        border-bottom: solid 2px $secondary !important;
+    }
+
+    .navbar.is-black .navbar-end>a.navbar-item:hover p {
+        border-bottom: solid 2px $primary !important;
+    }
+}
+
+// hero
+
+.hero {
+    background-color: black;
+    background-image: url(../../images/index/flower-arrangement-hero.webp);
+    background-repeat: no-repeat;
+    //background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+    text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+
+    .hero {
+
+        background-image: url(../../images/index/flower-arrangement-hero-medium.webp);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .hero {
+
+        background-image: url(../../images/index/flower-arrangement-hero-small.webp);
+    }
+}
+
+// products
+@media screen and (max-width: 769px) {
+
+    #products .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+// tabs
+
+.tabs a {
+    color: inherit;
+}
+
+.tabs.is-toggle li.is-active a {
+    background-color: $green !important;
+    border-color: $green !important;
+    color: #fff;
+    z-index: 1;
+}
+
+// purchases
+@media screen and (max-width: 769px) {
+
+    #purchase .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+// process
+@media screen and (max-width: 769px) {
+
+    #process .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+// footer
+@media screen and (max-width: 769px) {
+
+    #footer .column {
+        margin-top: 2rem;
+    }
+}
+
+// gallery.html
+
+// two column section
+@media screen and (max-width: 769px) {
+
+    #gallery .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+// filter buttons
+.has-background-pink {
+    background-color: $pink !important;
+}
+
+.has-background-purple {
+    background-color: $purple !important;
+}
+
+.has-background-peach {
+    background-color: $peach !important;
+}
+
+// about.html
+
+.has-background-secondary {
+    background-color: $green !important;
+}
+
+// two column section
+@media screen and (max-width: 769px) {
+
+    #quality .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+
+    #delivery .column:not(.column:first-child) {
+        margin-top: 2rem;
+    }
+}
+
+
+
+#test {
+    background-color: red
+}
+
+
+// Import only what you need from Bulma
+// base
+@import "../node_modules/bulma/sass/base/_all.sass";
+// components
+@import "../node_modules/bulma/sass/components/card.sass";
+@import "../node_modules/bulma/sass/components/dropdown.sass";
+@import "../node_modules/bulma/sass/components/message.sass";
+@import "../node_modules/bulma/sass/components/modal.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/components/tabs.sass";
+
+// elements
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/elements/image.sass";
+@import "../node_modules/bulma/sass/elements/tag.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+
+// grid
+@import "../node_modules/bulma/sass/grid/_all.sass";
+
+// helpers
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+
+// layout
+@import "../node_modules/bulma/sass/layout/_all.sass";
+
+// utilities
+@import "../node_modules/bulma/sass/utilities/_all.sass";
