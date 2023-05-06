@@ -21,3 +21,7 @@ Images have been omitted.
 
 - Semrush
 - Google Keyword Planner
+
+### Social Media Sharing
+
+- ShareThis
