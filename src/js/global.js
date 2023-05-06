@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // burger dropdown form mobile and tablet
     const burger = document.querySelector('#burger');
-    console.log(burger);
+    //console.log(burger);
 
     const navlinks = document.querySelector('#navlinks');
-    console.log(navlinks);
+    //console.log(navlinks);
 
     burger.addEventListener('click', () => {
         navlinks.classList.toggle('is-active');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         document.body.scrollTop = 0; // safari
         document.documentElement.scrollTop = 0; // chrome, firefox, ie, and opera
     });
