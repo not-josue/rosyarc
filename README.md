@@ -1,7 +1,7 @@
 # rosyarc
 
 This is my first website for a small business that sells flower arrangements online.
-I used Bulma CSS, and customized it in Node-Sass.
+I used Bulma CSS, and customized it with Node-Sass.
 
 Images have been omitted.
 
