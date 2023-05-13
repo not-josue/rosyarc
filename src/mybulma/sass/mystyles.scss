@@ -22,6 +22,21 @@ $peach: #f6c492;
 
 $family-primary: Georgia, 'Times New Roman', Times, serif;
 
+// cookie message
+#cookieMsg {
+    position: sticky;
+    width: 280px;
+    height: 125px;
+    left: 10px;
+    bottom: 10px;
+}
+
+button.delete {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
 // go to Top
 #top {
     position: fixed;

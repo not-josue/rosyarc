@@ -1,6 +1,37 @@
+// check if user has already previously acknowledged
+if (sessionStorage.getItem('cookieAcknowledge')) {
+    const card = document.querySelector('#cookieMsg');
+    card.classList.add('is-hidden');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
+    // cookie acknowledgement
+    remove();
+
     // burger dropdown form mobile and tablet
+    burger();
+
+    // go to Top
+    goTop();
+
+
+});
+
+// close cookie popup and set acknowledgement to session storage
+function remove() {
+    const remove = document.querySelector('button.delete');
+    remove.onclick = () => {
+        const card = document.querySelector('#cookieMsg');
+        card.classList.add('is-hidden');
+        sessionStorage.setItem('cookieAcknowledge', true);
+    }
+}
+
+
+
+// burger for mobile and tablet
+function burger() {
     const burger = document.querySelector('#burger');
     //console.log(burger);
 
@@ -10,9 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
         navlinks.classList.toggle('is-active');
     });
+}
 
-    // go to Top
-
+// go to Top
+function goTop() {
     const button = document.querySelector('#top');
     //console.log(button);
 
@@ -28,5 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.scrollTop = 0; // safari
         document.documentElement.scrollTop = 0; // chrome, firefox, ie, and opera
     });
-
-});
+}

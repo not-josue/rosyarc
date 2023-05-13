@@ -1,6 +1,18 @@
 .has-text-secondary {
   color: #2ecc40; }
 
+#cookieMsg {
+  position: sticky;
+  width: 280px;
+  height: 125px;
+  left: 10px;
+  bottom: 10px; }
+
+button.delete {
+  position: absolute;
+  right: 5px;
+  top: 5px; }
+
 #top {
   position: fixed;
   right: 5px;
