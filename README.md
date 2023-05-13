@@ -10,6 +10,7 @@ Images have been omitted.
 - navigation dropdown for burger icon
 - go to Top button
 - multiple image filters
+- cookie notification
 
 ## Home 
 🚀 [Live Page](https://www.rosyarc.com/)
