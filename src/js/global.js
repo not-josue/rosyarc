@@ -4,32 +4,6 @@ if (sessionStorage.getItem('cookieAcknowledge')) {
     card.classList.add('is-hidden');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    // cookie acknowledgement
-    remove();
-
-    // burger dropdown form mobile and tablet
-    burger();
-
-    // go to Top
-    goTop();
-
-
-});
-
-// close cookie popup and set acknowledgement to session storage
-function remove() {
-    const remove = document.querySelector('button.delete');
-    remove.onclick = () => {
-        const card = document.querySelector('#cookieMsg');
-        card.classList.add('is-hidden');
-        sessionStorage.setItem('cookieAcknowledge', true);
-    }
-}
-
-
-
 // burger for mobile and tablet
 function burger() {
     const burger = document.querySelector('#burger');
@@ -50,9 +24,9 @@ function goTop() {
 
     window.onscroll = function () {
         if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-            button.style.display = "flex";
+            button.classList.remove('is-hidden');
         } else {
-            button.style.display = "none";
+            button.classList.add('is-hidden');
         }
     }
 
@@ -61,3 +35,14 @@ function goTop() {
         document.documentElement.scrollTop = 0; // chrome, firefox, ie, and opera
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // burger dropdown form mobile and tablet
+    burger();
+
+    // go to Top
+    goTop();
+
+
+});
