@@ -1,6 +1,7 @@
 # rosyarc
 
-[![Bulma](https://img.shields.io/badge/Bulma-0.9.4-00d1b2?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA+VBMVEUAAAD///////////////////////////////////////////////////////////////////////////+pJyiSAAAAD3RSTlMAMsD7eNQ98d/yw7VWPyk8gduyV3qPfMvHjWeYCsAAABCSURBVBhXYxhDoSgAAzg8d0NFA4AQFCA4AC4IC4jQ0NC5k5i5E5w5zr5////QBFyCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNi0wOVQxMjoxNjo1MSswMDowMDqrY+sAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDYtMDlUMTI6MTY6NTErMDA6MDBj5EwAAAAASUVORK5CYII=)](https://bulma.io) [![Node-Sass](https://img.shields.io/badge/Node--Sass-8.0.0-ff69b4)](https://github.com/sass/node-sass)
+[![Bulma](https://img.shields.io/badge/Bulma-0.9.4-00d1b2?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA+VBMVEUAAAD///////////////////////////////////////////////////////////////////////////+pJyiSAAAAD3RSTlMAMsD7eNQ98d/yw7VWPyk8gduyV3qPfMvHjWeYCsAAABCSURBVBhXYxhDoSgAAzg8d0NFA4AQFCA4AC4IC4jQ0NC5k5i5E5w5zr5////QBFyCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNi0wOVQxMjoxNjo1MSswMDowMDqrY+sAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDYtMDlUMTI6MTY6NTErMDA6MDBj5EwAAAAASUVORK5CYII=)](https://bulma.io) [![Node-Sass 9.0](https://img.shields.io/badge/Node--Sass-9.0-%23c6538c.svg)](https://github.com/)
+
 
 Website for a small business that sells flower arrangements online. Made with Bulma CSS, customized in Node-Sass.
 
@@ -12,6 +13,7 @@ Images have been omitted.
 - go to Top button
 - multiple image filters
 - cookie notification
+- styling for buttons
 
 ## Responsiveness  
 
