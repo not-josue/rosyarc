@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title>Rosy Arc Gallery</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,67 +11,89 @@
     <meta name="keywords" content="rosy arc, silk flower arrangements, cemetery flowers" />
     <meta name="author" content="Rosy Arc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/rosy-arc-favicon.svg" />
+    <!-- bulma and fontawesome -->
     <link rel="stylesheet" href="mybulma/css/mystyles.css" />
     <script src="https://kit.fontawesome.com/dc7be97532.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
 
     <!-- start of navigation -->
     <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- logo, justify content for burger -->
-        <div class="navbar-brand is-justify-content-space-between">
-            <a class="navbar-item pl-5 py-5" href="index.html">
-                <img src="images/rosy-arc-logo-2023.svg" alt="rosy arc logo" style="max-height: 70px">
-                <p class="navbar-item has-text-light has-text-weight-semibold is-size-3">
+        <!-- start navbar brand: justify content for burger -->
+        <div class="navbar-brand is-justify-content-space-between is-align-items-center py-3">
+            <a class="navbar-item ml-4" href="index.html" title="Rosy Arc Home">
+                <img id="logo" src="images/logo.svg" alt="logo">
+                <p class="navbar-item has-text-white has-text-weight-semibold is-size-3">
                     Rosy Arc
                 </p>
             </a>
-            <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+
+            <a id="burger" role="button" class="navbar-burger mr-4" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample" title="Open Dropdown">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu pr-5" id="navlinks">
-            <!-- hidden on mobile -->
+        <!-- end navbar brand -->
+        <!-- start navbar menu -->
+        <div id="navlinks" class="navbar-menu pr-6">
             <div class="navbar-end">
-                <a href="index.html" class="navbar-item is-size-4">
-                    <p>Home</p>
-                </a>
-                <a href="gallery.html" class="navbar-item is-size-4 is-active">
-                    <p>Gallery</p>
-                </a>
-                <div class="navbar-item is-size-4 is-hoverable has-dropdown">
-                    <p class="navbar-link">
-                        Articles
+                <a class="navbar-item is-size-4" href="index.html" title="Rosy Arc Home">
+                    <p>
+                        Home
                     </p>
+                </a>
+
+                <a class="navbar-item is-size-4 is-active" href="gallery.html" title="Rosy Arc Gallery">
+                    <p>
+                        Gallery
+                    </p>
+                </a>
+                <!-- start dropdown -->
+                <div class="navbar-item is-size-4 has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Articles
+                    </a>
+
                     <div class="navbar-dropdown">
-                        <a href="diy-cemetery-bouquet.html" class="navbar-item is-size-5">
-                            DIY Cemetery Bouquet
+                        <a class="navbar-item is-size-5" href="diy-cemetery-bouquet.html" title="View Article">
+                            <p>
+                                DIY Cemetery Bouquet
+                            </p>
                         </a>
                     </div>
                 </div>
-                <a href="about.html" class="navbar-item is-size-4">
-                    <p>About</p>
+                <!-- end dropdown -->
+                <a class="navbar-item is-size-4" href="about.html" title="Rosy Arc About">
+                    <p>
+                        About
+                    </p>
                 </a>
             </div>
         </div>
+        <!-- end navbar menu -->
     </nav>
     <!-- end of navigation -->
-    <!-- start of hero -->
-    <div role="banner" class="hero is-black is-medium">
+    <!-- start hero -->
+    <section aria-roledescription="banner" class="hero is-black is-medium is-hidden-mobile">
         <div class="hero-body">
         </div>
-    </div>
-    <!-- end of hero -->
+    </section>
+    <!-- end hero -->
     <main>
         <!-- start of info section -->
         <section class="section has-background-light has-text-centered">
             <!-- start of columns -->
-            <div id="gallery" class="columns my-6">
-                <div class="column">
+            <div class="columns my-6">
+                <div class="column block">
                     <div class="block">
                         <span class="icon-text">
                             <span class="icon is-medium">
@@ -86,7 +109,7 @@
                         ground vase bouquets, saddles, and other memorial arrangements.
                     </p>
                 </div>
-                <div class="column">
+                <div class="column block">
                     <div class="block">
                         <span class="icon-text">
                             <span class="icon is-medium">
@@ -107,16 +130,16 @@
             </div>
             <!-- end of columns -->
             <!-- start of buttons -->
-            <div class="buttons is-justify-content-center">
-                <a class="has-text-light button is-medium is-success my-6" href="https://www.ebay.com/usr/rosyarc"
-                    target="_blank" rel="noopener noreferrer">
+            <div class="buttons is-justify-content-center mb-6">
+                <a class="has-text-light button is-medium is-success" href="https://www.ebay.com/usr/rosyarc"
+                    target="_blank" rel="noopener" title="View Ebay Store">
                     <span class="icon">
                         <i class="fa-solid fa-store"></i>
                     </span>
                     <span>Shop Inventory</span>
                 </a>
-                <a class="has-text-light button is-medium is-success my-6"
-                    href="https://www.pinterest.com/ihavearosyarc/" target="_blank" rel="noopener noreferrer">
+                <a class="has-text-light button is-medium is-success" href="https://www.pinterest.com/ihavearosyarc/"
+                    target="_blank" rel="noopener" title="View Pinterest">
                     <span>Follow on </span>
                     <span class="icon">
                         <i class="fa-brands fa-pinterest"></i>
@@ -129,8 +152,8 @@
         <!-- start of tabs section -->
         <section class="section">
             <!-- start of filters -->
-            <div class="columns is-mutiline mt-5">
-                <div class="column has-text-centered">
+            <div class="columns is-mutiline my-6">
+                <div id="filters" class="column has-text-centered">
                     <a>
                         <button data-color="all" class="button">
                             <span class="icon-text">
@@ -178,13 +201,11 @@
                     <a><button data-color="blue" class="button has-background-link">Blue</button></a>
                     <a><button data-color="purple" class="button has-background-purple">Purple</button></a>
                     <a><button data-color="white" class="button has-background-light">White</button></a>
-                    <a><button data-color="black" class="button has-background-black">Black</button></a>
                     <a><button data-color="peach" class="button has-background-peach">Peach</button></a>
                     <a><button data-color="pink" class="button has-background-pink">Pink</button></a>
                 </div>
             </div>
             <!-- end of filters -->
-            <hr class="has-background-black mt-2">
         </section>
         <!-- end of tabs section -->
         <!-- start of gallery -->
@@ -232,16 +253,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-4 blue orange">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image">
-                                    <img src="images/gallery/bouquets/blue/blue-bouquet05.webp"
-                                        alt="blue, and orange bouquet" loading="lazy">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
                     <div class="column is-4 blue">
                         <div class="card">
                             <div class="card-image">
@@ -257,6 +268,36 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img src="images/gallery/bouquets/blue/blue-bouquet07.webp"
+                                        alt="blue, and white bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 blue yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/blue/blue-bouquet08.webp"
+                                        alt="blue, and yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 blue">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/blue/blue-bouquet09.webp"
+                                        alt="blue bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 blue white">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/blue/blue-bouquet10.webp"
                                         alt="blue, and white bouquet" loading="lazy">
                                 </figure>
                             </div>
@@ -314,7 +355,29 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 orange white yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/orange/orange-bouquet06.webp"
+                                        alt="orange, white and yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end of orange -->
+                    <!-- start of peach -->
+                    <div class="column is-4 peach white">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/peach/peach-bouquet01.webp"
+                                        alt="peach, and white bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of peach -->
                     <!-- start of pink -->
                     <div class="column is-4 pink white">
                         <div class="card">
@@ -391,6 +454,16 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img src="images/gallery/bouquets/pink/pink-bouquet08.webp" alt="pink bouquet"
+                                        loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 pink red white">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/pink/pink-bouquet09.webp" alt="pink, red, and white bouquet"
                                         loading="lazy">
                                 </figure>
                             </div>
@@ -528,6 +601,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 purple orange">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/purple/purple-bouquet15.webp"
+                                        alt="purple, and orange bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 purple yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/purple/purple-bouquet16.webp"
+                                        alt="purple, and yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end of purple -->
                     <!-- start of red -->
                     <div class="column is-4 red pink white">
@@ -620,7 +713,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-4 red black white">
+                    <div class="column is-4 red white">
                         <div class="card">
                             <div class="card-image">
                                 <figure class="image">
@@ -650,7 +743,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-4 red white black">
+                    <div class="column is-4 red white">
                         <div class="card">
                             <div class="card-image">
                                 <figure class="image">
@@ -700,6 +793,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 red yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/red/red-bouquet18.webp"
+                                        alt="red, and yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 red yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/red/red-bouquet19.webp"
+                                        alt="red, and yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 red blue white">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/red/red-bouquet20.webp"
+                                        alt="red, white, and blue bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end of red -->
                     <!-- start of white -->
                     <div class="column is-4 white">
@@ -717,6 +840,16 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img src="images/gallery/bouquets/white/white-bouquet02.webp" alt="white bouquet"
+                                        loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 white yellow orange">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/white/white-bouquet03.webp" alt="white, yellow, and orange bouquet"
                                         loading="lazy">
                                 </figure>
                             </div>
@@ -814,6 +947,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 yellow">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/yellow/yellow-bouquet10.webp"
+                                        alt="yellow bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 yellow white">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/bouquets/yellow/yellow-bouquet11.webp"
+                                        alt="yellow, and white bouquet" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end of yellow -->
                     <!-- start of crosses -->
                     <div class="column is-4 blue white cross">
@@ -896,6 +1049,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 red white blue cross">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/memorials/crosses/red-cross04.webp"
+                                        alt="red, white, and blue cross" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- start of white -->
                     <div class="column is-4 white red blue cross">
                         <div class="card">
@@ -967,6 +1130,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 white red cross">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/memorials/crosses/white-cross08.webp"
+                                        alt="white, and red cross" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <!-- end of white -->
                     <div class="column is-4 yellow red white cross">
                         <div class="card">
@@ -984,6 +1157,16 @@
                                 <figure class="image">
                                     <img src="images/gallery/memorials/crosses/yellow-cross02.webp"
                                         alt="yellow, and red cross" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 yellow cross">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/memorials/crosses/yellow-cross03.webp"
+                                        alt="yellow cross" loading="lazy">
                                 </figure>
                             </div>
                         </div>
@@ -1144,6 +1327,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 blue yellow saddle">
+                        <div class=" card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/blue-saddle02.webp" alt="blue, and yellow saddle"
+                                        loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <div class="column is-4 orange red white saddle">
                         <div class=" card">
                             <div class="card-image">
@@ -1179,6 +1372,26 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img src="images/gallery/saddles/pink-saddle02.webp" alt="pink, and white saddle"
+                                        loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 pink purple saddle">
+                        <div class=" card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/pink-saddle03.webp" alt="pink, and purple saddle"
+                                        loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 pink saddle">
+                        <div class=" card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/pink-saddle04.webp" alt="pink saddle"
                                         loading="lazy">
                                 </figure>
                             </div>
@@ -1224,6 +1437,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-4 purple red yellow saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/purple-saddle05.webp"
+                                        alt="purple, red, and yellow saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 purple orange yellow saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/purple-saddle06.webp"
+                                        alt="purple, orange, and yellow saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 purple pink saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/purple-saddle07.webp"
+                                        alt="purple, and pink saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                     <div class="column is-4 red white saddle">
                         <div class="card">
                             <div class="card-image">
@@ -1239,6 +1482,15 @@
                             <div class="card-image">
                                 <figure class="image">
                                     <img src="images/gallery/saddles/red-saddle02.webp" alt="red saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 red white purple saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/red-saddle03.webp" alt="red, white, and purple saddle" loading="lazy">
                                 </figure>
                             </div>
                         </div>
@@ -1269,6 +1521,36 @@
                                 <figure class="image">
                                     <img src="images/gallery/saddles/yellow-saddle03.webp"
                                         alt="yellow, white, and red saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 yellow white saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/yellow-saddle04.webp"
+                                        alt="yellow, and white saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 yellow white saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/yellow-saddle05.webp"
+                                        alt="yellow, and white saddle" loading="lazy">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-4 yellow blue saddle">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="images/gallery/saddles/yellow-saddle06.webp"
+                                        alt="yellow, and blue saddle" loading="lazy">
                                 </figure>
                             </div>
                         </div>
@@ -1305,26 +1587,26 @@
     <button id="top" class="is-hidden button has-background-black has-text-light py-4 px-4">Top</button>
     <!-- start of footer -->
     <footer class="footer has-background-black">
-        <div id="footer" class="columns mt-6">
-            <div class="column">
+        <div class="columns mt-6">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Shop</p>
                     <p><a class="has-text-light is-underlined" href="https://www.ebay.com/usr/rosyarc" target="_blank"
-                            rel="noopener noreferrer follow">Ebay</a></p>
+                            rel="noopener follow" title="View Ebay Store">Ebay</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.pinterest.com/ihavearosyarc/"
-                            target="_blank" rel="noopener noreferrer follow">Pinterest</a></p>
+                            target="_blank" rel="noopener follow" title="View Pinterest">Pinterest</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.redbubble.com/people/rosyarc/shop"
-                            target="_blank" rel="noopener noreferrer follow">Redbubble</a></p>
+                            target="_blank" rel="noopener follow" title="View Redbubble Designs">Redbubble</a></p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">About</p>
                     <p class="has-text-light">Rosy Arc is a small business that provides quality flower arrangements at
                         an affordable price.</p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Products</p>
                     <p>Bouquets</p>
@@ -1333,22 +1615,26 @@
                 </div>
             </div>
         </div>
-        <!-- end of columns -->
         <div class="section">
             <div class="container has-text-centered has-text-light">
                 <p>
                     Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    <span id="year">
+                        <script>
+                            const year = document.querySelector('#year');
+                            year.innerHTML = new Date().getFullYear();
+                        </script>
+                    </span>
                     by Rosy Arc. All Rights Reserved.
                 </p>
             </div>
         </div>
     </footer>
     <!-- end of footer -->
+
     <script src="js/global.js"></script>
     <script src="js/galleryFilter.js"></script>
+
 </body>
 
 </html>

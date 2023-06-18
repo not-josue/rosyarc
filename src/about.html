@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title>Rosy Arc About</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,66 +11,90 @@
     <meta name="keywords" content="rosy arc, silk flower arrangements, cemetery flowers" />
     <meta name="author" content="Rosy Arc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/rosy-arc-favicon.svg" />
+    <!-- bulma and fontawesome -->
     <link rel="stylesheet" href="mybulma/css/mystyles.css" />
     <script src="https://kit.fontawesome.com/dc7be97532.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
+
     <!-- start of navigation -->
     <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- logo, justify content for burger -->
-        <div class="navbar-brand is-justify-content-space-between">
-            <a class="navbar-item pl-5 py-5" href="index.html">
-                <img src="images/rosy-arc-logo-2023.svg" alt="rosy arc logo" style="max-height: 70px">
-                <p class="navbar-item has-text-light has-text-weight-semibold is-size-3">
+        <!-- start navbar brand: justify content for burger -->
+        <div class="navbar-brand is-justify-content-space-between is-align-items-center py-3">
+            <a class="navbar-item ml-4" href="index.html" title="Rosy Arc Home">
+                <img id="logo" src="images/logo.svg" alt="logo">
+                <p class="navbar-item has-text-white has-text-weight-semibold is-size-3">
                     Rosy Arc
                 </p>
             </a>
-            <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+
+            <a id="burger" role="button" class="navbar-burger mr-4" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample" title="Open Dropdown">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu pr-5" id="navlinks">
-            <!-- hidden on mobile -->
+        <!-- end navbar brand -->
+        <!-- start navbar menu -->
+        <div id="navlinks" class="navbar-menu pr-6">
             <div class="navbar-end">
-                <a href="index.html" class="navbar-item is-size-4">
-                    <p>Home</p>
-                </a>
-                <a href="gallery.html" class="navbar-item is-size-4">
-                    <p>Gallery</p>
-                </a>
-                <div class="navbar-item is-size-4 is-hoverable has-dropdown">
-                    <p class="navbar-link">
-                        Articles
+                <a class="navbar-item is-size-4" href="index.html" title="Rosy Arc Home">
+                    <p>
+                        Home
                     </p>
+                </a>
+
+                <a class="navbar-item is-size-4" href="gallery.html" title="Rosy Arc Gallery">
+                    <p>
+                        Gallery
+                    </p>
+                </a>
+                <!-- start dropdown -->
+                <div class="navbar-item is-size-4 has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Articles
+                    </a>
+
                     <div class="navbar-dropdown">
-                        <a href="diy-cemetery-bouquet.html" class="navbar-item is-size-5">
-                            DIY Cemetery Bouquet
+                        <a class="navbar-item is-size-5" href="diy-cemetery-bouquet.html" title="View Article">
+                            <p>
+                                DIY Cemetery Bouquet
+                            </p>
                         </a>
                     </div>
                 </div>
-                <a href="about.html" class="navbar-item is-size-4 is-active">
-                    <p>About</p>
+                <!-- end dropdown -->
+                <a class="navbar-item is-size-4 is-active" href="about.html" title="Rosy Arc About">
+                    <p>
+                        About
+                    </p>
                 </a>
             </div>
         </div>
+        <!-- end navbar menu -->
     </nav>
     <!-- end of navigation -->
-    <!-- start of hero -->
-    <div role="banner" class="hero is-black is-medium">
+    <!-- start hero -->
+    <section aria-roledescription="banner" class="hero is-black is-medium is-hidden-mobile">
         <div class="hero-body">
         </div>
-    </div>
-    <!-- end of hero -->
+    </section>
+    <!-- end hero -->
     <main>
-        <!-- start of inspire-->
+
+        <!-- start of inspire -->
         <section class="section">
-            <header class="container has-text-centered my-6">
-                <h2 class="is-size-2 has-text-weight-bold">The Rosy Arc</h2>
-                <p class="subtitle is-italic">"a memorable passage of time"</p>
+            <header class="has-text-centered my-6">
+                <h1 class="is-size-2 has-text-weight-bold">The Rosy Arc</h1>
+                <p class="subtitle is-italic">a memorable passage of time</p>
             </header>
             <!-- start of two columns -->
             <div class="section">
@@ -101,7 +126,7 @@
         <!-- end of inspire -->
         <!-- start of quality -->
         <section class="section has-text-light has-background-secondary">
-            <header class="container has-text-centered my-6">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Quality</h2>
             </header>
             <!-- start of 2 columns -->
@@ -154,7 +179,7 @@
         <!-- end of quality -->
         <!-- start of delivery -->
         <section class="section">
-            <header class="container has-text-centered my-6">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Delivery</h2>
             </header>
             <!-- start of 2 columns -->
@@ -204,31 +229,32 @@
                 <!-- end of 2 columns -->
         </section>
         <!-- end of delivery -->
+
     </main>
     <!-- go to TOP -->
     <button id="top" class="is-hidden button has-background-black has-text-light py-4 px-4">Top</button>
     <!-- start of footer -->
     <footer class="footer has-background-black">
-        <div id="footer" class="columns mt-6">
-            <div class="column">
+        <div class="columns mt-6">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Shop</p>
                     <p><a class="has-text-light is-underlined" href="https://www.ebay.com/usr/rosyarc" target="_blank"
-                            rel="noopener noreferrer follow">Ebay</a></p>
+                            rel="noopener follow" title="View Ebay Store">Ebay</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.pinterest.com/ihavearosyarc/"
-                            target="_blank" rel="noopener noreferrer follow">Pinterest</a></p>
+                            target="_blank" rel="noopener follow" title="View Pinterest">Pinterest</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.redbubble.com/people/rosyarc/shop"
-                            target="_blank" rel="noopener noreferrer follow">Redbubble</a></p>
+                            target="_blank" rel="noopener follow" title="View Redbubble Designs">Redbubble</a></p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">About</p>
                     <p class="has-text-light">Rosy Arc is a small business that provides quality flower arrangements at
                         an affordable price.</p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Products</p>
                     <p>Bouquets</p>
@@ -237,21 +263,25 @@
                 </div>
             </div>
         </div>
-        <!-- end of columns -->
         <div class="section">
             <div class="container has-text-centered has-text-light">
                 <p>
                     Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    <span id="year">
+                        <script>
+                            const year = document.querySelector('#year');
+                            year.innerHTML = new Date().getFullYear();
+                        </script>
+                    </span>
                     by Rosy Arc. All Rights Reserved.
                 </p>
             </div>
         </div>
     </footer>
     <!-- end of footer -->
+
     <script src="js/global.js"></script>
+
 </body>
 
 </html>

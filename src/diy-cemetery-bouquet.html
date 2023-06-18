@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title>DIY Cemetery Bouquet</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,8 +11,11 @@
     <meta name="keywords" content="rosy arc, silk flower arrangements, cemetery flowers" />
     <meta name="author" content="Rosy Arc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/rosy-arc-favicon.svg" />
-    <link rel="stylesheet" href="mybulma/css/mystyles.css" />
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- social media sharing -->
     <meta property="og:url" content="https://www.rosyarc.com/diy-cemetery-bouquet.html" />
     <meta property="og:type" content="article" />
@@ -21,74 +25,95 @@
     <meta property="og:image" content="https://rosyarc.com/images/article1/flowers.webp" />
     <meta name="twitter:image" content="https://rosyarc.com/images/article1/flowers.webp">
     <meta property="pinterest:image" content="https://rosyarc.com/images/article1/flowers.webp">
-    <!-- font awesome and sharethis -->
+    <!-- bulma, font awesome and sharethis -->
+    <link rel="stylesheet" href="mybulma/css/mystyles.css" />
     <script type='text/javascript'
         src='https://platform-api.sharethis.com/js/sharethis.js#property=6454f47e8422190019dbb7f6&product=sop'
-        async='async'></script>
+        defer></script>
     <script src="https://kit.fontawesome.com/dc7be97532.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
+
     <!-- start of navigation -->
     <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- logo, justify content for burger -->
-        <div class="navbar-brand is-justify-content-space-between">
-            <a class="navbar-item pl-5 py-5" href="index.html">
-                <img src="images/rosy-arc-logo-2023.svg" alt="rosy arc logo" style="max-height: 70px">
-                <p class="navbar-item has-text-light has-text-weight-semibold is-size-3">
+        <!-- start navbar brand: justify content for burger -->
+        <div class="navbar-brand is-justify-content-space-between is-align-items-center py-3">
+            <a class="navbar-item ml-4" href="index.html" title="Rosy Arc Home">
+                <img id="logo" src="images/logo.svg" alt="logo">
+                <p class="navbar-item has-text-white has-text-weight-semibold is-size-3">
                     Rosy Arc
                 </p>
             </a>
-            <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+
+            <a id="burger" role="button" class="navbar-burger mr-4" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample" title="Open Dropdown">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu pr-5" id="navlinks">
-            <!-- hidden on mobile -->
+        <!-- end navbar brand -->
+        <!-- start navbar menu -->
+        <div id="navlinks" class="navbar-menu pr-6">
             <div class="navbar-end">
-                <a href="index.html" class="navbar-item is-size-4">
-                    <p>Home</p>
-                </a>
-                <a href="gallery.html" class="navbar-item is-size-4">
-                    <p>Gallery</p>
-                </a>
-                <div class="navbar-item is-size-4 is-hoverable has-dropdown">
-                    <p class="navbar-link">
-                        Articles
+                <a class="navbar-item is-size-4" href="index.html" title="Rosy Arc Home">
+                    <p>
+                        Home
                     </p>
+                </a>
+
+                <a class="navbar-item is-size-4" href="gallery.html" title="Rosy Arc Gallery">
+                    <p>
+                        Gallery
+                    </p>
+                </a>
+                <!-- start dropdown -->
+                <div class="navbar-item is-size-4 has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Articles
+                    </a>
+
                     <div class="navbar-dropdown">
-                        <a href="diy-cemetery-bouquet.html" class="navbar-item is-size-5">
-                            DIY Cemetery Bouquet
+                        <a class="navbar-item is-size-5 is-active" href="diy-cemetery-bouquet.html"
+                            title="View Article">
+                            <p>
+                                DIY Cemetery Bouquet
+                            </p>
                         </a>
                     </div>
                 </div>
-                <a href="about.html" class="navbar-item is-size-4 is-active">
-                    <p>About</p>
+                <!-- end dropdown -->
+                <a class="navbar-item is-size-4" href="about.html" title="Rosy Arc About">
+                    <p>
+                        About
+                    </p>
                 </a>
             </div>
         </div>
+        <!-- end navbar menu -->
     </nav>
     <!-- end of navigation -->
-    <!-- start of hero -->
-    <div role="banner" class="hero is-black is-medium">
+    <!-- start hero -->
+    <section aria-roledescription="banner" class="hero is-black is-medium is-hidden-mobile">
         <div class="hero-body">
         </div>
-    </div>
+    </section>
+    <!-- end hero -->
     <!-- start of main content -->
     <main>
         <article>
             <!-- start of article title -->
-            <section class="section">
-                <header class="container has-text-centered my-6">
+            <section class="section is-flex is-justify-content-center has-text-centered">
+                <header class="my-6">
                     <div class="block">
-                        <h1 class="is-size-2 has-text-weight-bold">
+                        <h1 class="is-size-2 is-size-3-mobile has-text-weight-bold">
                             DIY Cemetery Bouquets
                         </h1>
                     </div>
                     <div class="block">
-                        <p class="is-size-4-mobile is-size-3">
+                        <p class="is-size-3 is-size-4-mobile">
                             We've made hundreds of ground vase bouquets. This is a
                             simple guide in creating your own cemetery bouquet.
                         </p>
@@ -96,44 +121,28 @@
                 </header>
             </section>
             <!-- end of article title -->
-
-            <!-- start of article body -->
-
-            <!-- start of step 1-->
-            <section class="section has-background-light">
-                <header class="container has-text-centered my-6">
-                    <h2 class="is-size-2 has-text-weight-bold">Step 1: Select your flowers</h2>
+            <!-- start of step 1 -->
+            <section
+                class="section has-background-light is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered">
+                <header class="my-6">
+                    <h2 class="is-size-2 is-size-3-mobile has-text-weight-bold">Step 1: Select your flowers</h2>
                 </header>
-                <!-- start of two columns -->
-                <div class="section">
-                    <div class="columns is-vcentered has-text-centered">
-                        <div class="column">
-                            <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                View flowers online from your favorite local craft stores. Pick out
-                                the main colors, and the types of flowers you like. Roses, Gerber Daisies,
-                                Tulips, Carnations, Lilies, and other fillers you may want to add to your
-                                bouquet.
-                            </p>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-3by2">
-                                        <img srcset="images/article1/flowers.webp 634w,
-                                        images/article1/flowers-small.webp 320w" sizes="(max-width: 450px) 320px"
-                                            loading="lazy" alt="various silk flowers">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of two columns -->
+                <figure class="section article-img">
+                    <img src="images/article1/flowers-small.webp" srcset="images/article1/flowers.webp 634w,
+                    images/article1/flowers-small.webp 320w" sizes="(max-width: 450px) 320px" loading="lazy"
+                        alt="various silk flowers">
+                </figure>
+                <p class="is-size-4-mobile is-size-3">
+                    View flowers online from your favorite local craft stores. Pick out
+                    the main colors, and the types of flowers you like. Roses, Gerber Daisies,
+                    Tulips, Carnations, Lilies, and other fillers you may want to add to your
+                    bouquet.
+                </p>
                 <!-- start of buttons -->
                 <div class="buttons is-justify-content-center my-6">
                     <a class="has-text-light button is-info"
                         href="https://www.hobbylobby.com/Floral-Wedding/Florals/c/4-120" target="_blank"
-                        rel="noopener noreferrer follow">
+                        rel="noopener follow" title="View Hobby Lobby">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -141,7 +150,7 @@
                     </a>
                     <a class="has-text-light button is-success"
                         href="https://www.joann.com/floral/floral-stems-bushes-picks/floral-bushes/" target="_blank"
-                        rel="noopener noreferrer follow">
+                        rel="noopener follow" title="View Joann Fabrics">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -149,7 +158,7 @@
                     </a>
                     <a class="has-text-light button  is-danger" <a
                         href="https://www.michaels.com/shop/floral/floral-stems-bushes-picks/floral-bushes"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Michaels">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -160,71 +169,57 @@
             </section>
             <!-- end of step 1 -->
             <!-- start of step 2 -->
-            <section class="section">
-                <header class="container has-text-centered my-6">
-                    <h2 class="is-size-2 has-text-weight-bold">Step 2: Select your vase</h2>
+            <section
+                class="section is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered">
+                <header class="my-6">
+                    <h2 class="is-size-2 is-size-3-mobile has-text-weight-bold">Step 2: Select your vase</h2>
                 </header>
-                <!-- start of two columns -->
-                <div class="section">
-                    <div class="columns is-vcentered has-text-centered">
-                        <div class="column">
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    Decide which color, and type of vase you
-                                    would like to use. Plastic green vases are the most
-                                    common cemetery vases you can find.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    Keep note of the height, and the diameter of the vase as this will
-                                    play a role in how many flowers you can fit
-                                    together.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    Look out for vases that come with the foam inserts. When
-                                    purchasing these vases, some may come glued
-                                    to the vase, making it more difficult to
-                                    transfer your bouquet if you need to in the future.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img srcset="images/article1/cemetery-vases.webp 445w,
-                                        images/article1/cemetery-vases-small.webp 245w"
-                                            sizes="(max-width: 450px) 245px" loading="lazy"
-                                            alt="green plastic cemetery vases">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <figure class="section article-img">
+                    <img src="images/article1/cemetery-vases-small.webp" srcset="images/article1/cemetery-vases.webp 445w,
+                    images/article1/cemetery-vases-small.webp 245w" sizes="(max-width: 450px) 245px" loading="lazy"
+                        alt="green plastic cemetery vases" class="article-tall-img">
+                </figure>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Decide which color, and type of vase you
+                        would like to use. Plastic green vases are the most
+                        common cemetery vases you can find.
+                    </p>
                 </div>
-                <!-- end of two columns -->
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Keep note of the height, and the diameter of the vase as this will
+                        play a role in how many flowers you can fit
+                        together.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Look out for vases that come with the foam inserts. When
+                        purchasing these vases, some may come glued
+                        to the vase, making it more difficult to
+                        transfer your bouquet if you need to in the future.
+                    </p>
+                </div>
                 <!-- start of buttons -->
                 <div class="buttons is-justify-content-center my-6">
                     <a class="button is-warning"
                         href="https://www.amazon.com/s?k=cemetery+vases&crid=G29QP07W2OVN&sprefix=cemetery+vases%2Caps%2C317&ref=nb_sb_noss_1"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Amazon">
                         <span class="icon">
                             <i class="fa-brands fa-amazon"></i>
                         </span>
                         <span>Amazon</span>
                     </a>
                     <a class="has-text-light button is-success" href="https://ebay.us/vEmRis" target="_blank"
-                        rel="noopener noreferrer sponsored">
+                        rel="noopener sponsored" title="View Ebay">
                         <span class="icon">
                             <i class="fa-brands fa-ebay"></i>
                         </span>
                         <span>Ebay Affiliate</span>
                     </a>
                     <a class="has-text-light button is-danger" href="https://www.michaels.com/search?q=cemetery%20vases"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Michaels">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -234,7 +229,7 @@
                 <!-- end of buttons -->
             </section>
             <!-- end of step 2 -->
-            <!-- start of shop and social media messages -->
+            <!-- start of advertising -->
             <section class="section has-background-primary">
                 <div class="section">
                     <div class="columns has-text-centered">
@@ -255,7 +250,7 @@
                                     <div class="block">
                                         <a class="has-text-light button is-success"
                                             href="https://www.ebay.com/usr/rosyarc" target="_blank"
-                                            rel="noopener noreferrer follow">
+                                            rel="noopener follow" title="View Ebay">
                                             <span class="icon">
                                                 <i class="fa-solid fa-store"></i>
                                             </span>
@@ -282,7 +277,7 @@
                                     <div class="block">
                                         <a class="has-text-light button is-black"
                                             href="https://www.pinterest.com/ihavearosyarc/" target="_blank"
-                                            rel="noopener noreferrer follow">
+                                            rel="noopener follow" title="View Pinterest">
                                             <span>Follow on </span>
                                             <span class="icon">
                                                 <i class="fa-brands fa-pinterest"></i>
@@ -295,66 +290,48 @@
                     </div>
                 </div>
             </section>
-            <!-- end of shop and social media messages -->
+            <!-- end of advertising -->
             <!-- start of step 3 -->
-            <section class="section">
-                <header class="container has-text-centered my-6">
-                    <h2 class="is-size-2 has-text-weight-bold">Step 3: Bouquet base</h2>
+            <section
+                class="section is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered">
+                <header class="my-6">
+                    <h2 class="is-size-2 is-size-3-mobile has-text-weight-bold">Step 3: Bouquet base</h2>
                 </header>
-                <!-- start of two columns -->
-                <div class="section">
-                    <div class="columns is-vcentered has-text-centered">
-                        <div class="column">
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    You're going to need a
-                                    base to hold your flowers
-                                    together. You can buy premade floral foam inserts, or
-                                    you can make your own using polystyrene circle discs.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    Both can be bought at your local craft store or online.
-                                    When buying polystyrene,
-                                    also look at the width. We suggest, and
-                                    use polystyrene with a 2-inch depth.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    If your insert, or polystyrene does not
-                                    fit your vase, you're going to need to cut
-                                    the foam with a hotwire tool. The inserts don't
-                                    have to be perfect, but tight enough to hold your
-                                    flower arrangement in place.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-3by2">
-                                        <img srcset="images/article1/bouquet-base.webp 424w,
-                                        images/article1/bouquet-base-small.webp 254w" sizes="(max-width: 450px) 254px"
-                                            loading="lazy" alt="bouquet bases made from polystyrene circle discs">
-                                    </figure>
-                                </div>
-                                <footer class="card-footer">
-                                    <p class="card-footer-item">
-                                        2-inch thick polystyrene used
-                                    </p>
-                                </footer>
-                            </div>
-                        </div>
-                    </div>
+                <figure class="section article-img">
+                    <img src="images/article1/bouquet-base-small.webp" srcset="images/article1/bouquet-base.webp 424w,
+                images/article1/bouquet-base-small.webp 254w" sizes="(max-width: 450px) 254px" loading="lazy"
+                        alt="bouquet bases made from polystyrene circle discs" class="article-square-img">
+                </figure>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        You're going to need a
+                        base to hold your flowers
+                        together. You can buy premade floral foam inserts, or
+                        you can make your own using polystyrene circle discs.
+                    </p>
                 </div>
-                <!-- end of two columns -->
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Both can be bought at your local craft store or online.
+                        When buying polystyrene,
+                        also look at the width. We suggest, and
+                        use polystyrene with a 2-inch depth.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        If your insert, or polystyrene does not
+                        fit your vase, you're going to need to cut
+                        the foam with a hotwire tool. The inserts don't
+                        have to be perfect, but tight enough to hold your
+                        flower arrangement in place.
+                    </p>
+                </div>
                 <!-- start of buttons -->
                 <div class="buttons is-justify-content-center my-6">
                     <a class="button is-warning"
                         href="https://www.amazon.com/s?k=floral+foam+vase+insert&crid=3ANVSUHIB9S8C&sprefix=floral+foam+vase+insert%2Caps%2C143&ref=nb_sb_noss_1"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Amazon">
                         <span class="icon">
                             <i class="fa-brands fa-amazon"></i>
                         </span>
@@ -362,7 +339,7 @@
                     </a>
                     <a class="has-text-light button is-danger"
                         href="https://www.michaels.com/search?q=memorial%20vase%20insert" target="_blank"
-                        rel="noopener noreferrer follow">
+                        rel="noopener follow" title="View Michaels">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -370,7 +347,7 @@
                     </a>
                     <a class="button is-warning"
                         href="https://www.amazon.com/s?k=polystyrene+circle&crid=1VET4RWU8VRQ8&sprefix=polystyrene+circle%2Caps%2C146&ref=nb_sb_noss_1"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Amazon">
                         <span class="icon">
                             <i class="fa-brands fa-amazon"></i>
                         </span>
@@ -378,7 +355,7 @@
                     </a>
                     <a class="has-text-light button  is-danger" <a
                         href="https://www.michaels.com/search?q=polystyrene%20circles" target="_blank"
-                        rel="noopener noreferrer follow">
+                        rel="noopener follow" title="View Michaels">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -387,304 +364,238 @@
                 </div>
                 <!-- end of buttons -->
             </section>
-            <!-- end of step 3-->
+            <!-- end of step 3 -->
             <!-- start of hotwire -->
-            <section class="section has-background-light">
-                <div class="section">
-                    <header class="container has-text-centered my-6">
-                        <h3 class="is-size-2 has-text-weight-bold">Cutting with hotwire</h3>
-                    </header>
-                    <!-- start of two columns -->
-                    <div class="section">
-                        <div class="columns has-text-centered">
-                            <div class="column is-half">
-                                <div class="block">
-                                    <header class="container has-text-centered">
-                                        <h4 class="is-size-4 has-text-weight-bold">Handhelds</h4>
-                                    </header>
-                                </div>
-                                <div class="block">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <figure class="image">
-                                                <img src="https://m.media-amazon.com/images/I/61bBTf33dqL._AC_SX425_.jpg"
-                                                    alt="hotwire tool kit">
-                                            </figure>
-                                        </div>
-                                        <footer class="card-footer">
-                                            <a class="card-footer-item button is-warning is-justify-content-center"
-                                                href="https://a.co/d/bFnXhU9" target="_blank"
-                                                rel="noopener noreferrer follow">
-                                                <span class="icon">
-                                                    <i class="fa-brands fa-amazon"></i>
-                                                </span>
-                                                <span>Amazon</span>
-                                            </a>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        With a hotwire handheld kit, you can shape the
-                                        size of your circles. There are plenty of affordable
-                                        options in crafting stores like Hobby Lobby.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        These hotwire tools are sufficient enough for
-                                        this project, but may take more patience when first
-                                        using.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        A common issue with these tools involves the lack of tension
-                                        control they may have. As you're cutting polystyrene, the hotwire
-                                        may loosen and slide down the tool, or even break.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        This can lead to accuracy issues when cutting polystyrene.
-                                        Also, having to stop and readjust the wire
-                                        constantly can be very frustrating.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        So always make sure your wire is tied
-                                        tightly before you start cutting by wrapping each end of the
-                                        wire around the tool, and then checking the wire tension.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Other issues with these affordable hotwire tools are
-                                        questionable durability, and a lack of safety features.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="column is-half">
-                                <div class="block">
-                                    <header class="container has-text-centered">
-                                        <h4 class="is-size-4 has-text-weight-bold">Tabletops</h4>
-                                    </header>
-                                </div>
-                                <div class="block">
-                                    <div class="card">
-                                        <div class="card-image">
-                                            <figure class="image">
-                                                <img src="https://m.media-amazon.com/images/I/716XC-m0iZL._AC_SX425_.jpg"
-                                                    alt="hotwire tabletop">
-                                            </figure>
-                                        </div>
-                                        <footer class="card-footer">
-                                            <a class="card-footer-item button is-warning is-justify-content-center"
-                                                href="https://a.co/d/1FsMaXa" target="_blank"
-                                                rel="noopener noreferrer follow">
-                                                <span class="icon">
-                                                    <i class="fa-brands fa-amazon"></i>
-                                                </span>
-                                                <span>Amazon</span>
-                                            </a>
-                                        </footer>
-                                    </div>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        A hotwire tabletop is a more
-                                        long term option. If choosing a tabletop
-                                        we suggest you use polystyrene squares or blocks to make your circles.
-                                        You can buy a sheet of polystyrene, and cut small squares when you need to
-                                        make a bouquet base.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Some hotwire tabletops come with an attachment that
-                                        lets you create perfect circles easily.
-                                        This attachment is placed on an adjustable guide arm ("dimension ruler"), and
-                                        has
-                                        a spike to hold your polystyrene.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Place the piece of polystyrene on the attachment.
-                                        Move the guide arm and the attachment close to your
-                                        hotwire pillar.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Turn your hotwire temperature up, wait until it heats up, then
-                                        slowly rotate your polystyrene completely until your circle is done, turn your
-                                        hotwire off.
-                                        The spike keeps the polystyrene in place, whilst the hotwire is cutting off the
-                                        unnecessary ends.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <figure class="image is-flex is-justify-content-center">
-                                        <iframe width="560" height="315"
-                                            src="https://www.youtube.com/embed/PDUGLNdQD6I?start=5&end=18"
-                                            title="YouTube video player" frameborder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            allowfullscreen></iframe>
-                                    </figure>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        You will need to cut multiple circles for one bouquet.
-                                        For example,
-                                        you may need one circle with a 2.6 inch diameter
-                                        for the bottom of the vase, and another that is 3 inches
-                                        for the top of the vase.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Remember a circle's radius is half the size of a circle. If you need a
-                                        circle that is 3 inches long, it must have a 1.5 inch radius. From your hotwire,
-                                        measure 1.5 inches, and move your guide arm to this spot.
-                                    </p>
-                                </div>
-                                <div class="block">
-                                    <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                        Make sure your polystyrene
-                                        is centered on the spike, and start cutting. Depending on your
-                                        measurements, and how much your hotwire
-                                        takes off, your circle should be around the desired 3 inch length.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of two columns -->
-                    <!-- start of buttons -->
-                    <div class="section">
-                        <!-- start of two columns -->
-                        <div class="columns">
-                            <div class="column">
-                                <div class="block">
-                                    <header class="container has-text-centered">
-                                        <h4 class="is-size-5 is-underlined">Handhelds</h4>
-                                    </header>
-                                </div>
-                                <div class="buttons is-justify-content-center">
-                                    <a class="button is-warning"
-                                        href="https://www.amazon.com/s?k=hotwire+foam+cutter&crid=1IIW988TIJCWT&sprefix=hotwire%2Caps%2C120&ref=nb_sb_ss_ts-doa-p_3_7"
-                                        target="_blank" rel="noopener noreferrer follow">
-                                        <span class="icon">
-                                            <i class="fa-brands fa-amazon"></i>
-                                        </span>
-                                        <span>Amazon</span>
-                                    </a>
-                                    <a class="has-text-light button is-success" href="https://ebay.us/77B7O8"
-                                        target="_blank" rel="noopener noreferrer sponsored">
-                                        <span class="icon">
-                                            <i class="fa-brands fa-ebay"></i>
-                                        </span>
-                                        <span>Ebay Affiliate</span>
-                                    </a>
-                                    <a class="has-text-light button is-info"
-                                        href="https://www.hobbylobby.com/Crafts-Hobbies/Basic-Crafts/Styrofoam/3-In-1-Hot-Wire-Foam-Cutting-Tool/p/80916662"
-                                        target="_blank" rel="noopener noreferrer follow">
-                                        <span class="icon">
-                                            <i class="fa-solid fa-bag-shopping"></i>
-                                        </span>
-                                        <span>Hobby Lobby</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column">
-                                <div class="block">
-                                    <header class="container has-text-centered">
-                                        <h4 class="is-size-5 is-underlined">Tabletops</h4>
-                                    </header>
-                                </div>
-                                <div class="buttons is-justify-content-center">
-                                    <a class="button is-warning"
-                                        href="https://www.amazon.com/s?k=hot+wire+tabletop&ref=nb_sb_noss"
-                                        target="_blank" rel="noopener noreferrer follow">
-                                        <span class="icon">
-                                            <i class="fa-brands fa-amazon"></i>
-                                        </span>
-                                        <span>Amazon</span>
-                                    </a>
-                                    <a class="has-text-light button is-success" href="https://ebay.us/dSihgc"
-                                        target="_blank" rel="noopener noreferrer sponsored">
-                                        <span class="icon">
-                                            <i class="fa-brands fa-ebay"></i>
-                                        </span>
-                                        <span>Ebay Affiliate</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end of two columns -->
-                    </div>
-                    <!-- end of buttons -->
+            <section
+                class="section has-background-light is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered">
+                <header class="my-6">
+                    <h2 class="is-size-2 is-size-3-mobile has-text-weight-bold">Cutting with hotwire</h2>
+                </header>
+                <!-- start of handhelds -->
+                <header class="my-6">
+                    <h4 class="is-size-3 is-size-4-mobile has-text-weight-bold">Using Handhelds</h4>
+                </header>
+                <figure class="image">
+                    <img src="https://m.media-amazon.com/images/I/61bBTf33dqL._AC_SX425_.jpg" alt="hotwire tool kit"
+                        loading="lazy">
+                </figure>
+                <a class="button is-warning is-justify-content-center my-6" href="https://a.co/d/bFnXhU9"
+                    target="_blank" rel="noopener follow" title="View Amazon">
+                    <span class="icon">
+                        <i class="fa-brands fa-amazon"></i>
+                    </span>
+                    <span>Amazon</span>
+                </a>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        With a hotwire handheld kit, you can shape the
+                        size of your circles. There are plenty of affordable
+                        options in crafting stores like Hobby Lobby.
+                    </p>
                 </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        These hotwire tools are sufficient enough for
+                        this project, but may take more patience when first
+                        using.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        A common issue with these tools involves the lack of tension
+                        control they may have. As you're cutting polystyrene, the hotwire
+                        may loosen and slide down the tool, or even break.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        This can lead to accuracy issues when cutting polystyrene.
+                        Also, having to stop and readjust the wire
+                        constantly can be very frustrating.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        So always make sure your wire is tied
+                        tightly before you start cutting by wrapping each end of the
+                        wire around the tool, and then checking the wire tension.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Other issues with these affordable hotwire tools are
+                        questionable durability, and a lack of safety features.
+                    </p>
+                </div>
+                <div class="buttons is-justify-content-center my-6">
+                    <a class="button is-warning"
+                        href="https://www.amazon.com/s?k=hotwire+foam+cutter&crid=1IIW988TIJCWT&sprefix=hotwire%2Caps%2C120&ref=nb_sb_ss_ts-doa-p_3_7"
+                        target="_blank" rel="noopener follow" title="View Amazon">
+                        <span class="icon">
+                            <i class="fa-brands fa-amazon"></i>
+                        </span>
+                        <span>Amazon</span>
+                    </a>
+                    <a class="has-text-light button is-success" href="https://ebay.us/77B7O8" target="_blank"
+                        rel="noopener sponsored" title="View Ebay">
+                        <span class="icon">
+                            <i class="fa-brands fa-ebay"></i>
+                        </span>
+                        <span>Ebay Affiliate</span>
+                    </a>
+                    <a class="has-text-light button is-info"
+                        href="https://www.hobbylobby.com/Crafts-Hobbies/Basic-Crafts/Styrofoam/3-In-1-Hot-Wire-Foam-Cutting-Tool/p/80916662"
+                        target="_blank" rel="noopener follow" title="View Hobby Lobby">
+                        <span class="icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </span>
+                        <span>Hobby Lobby</span>
+                    </a>
+                </div>
+                <!-- end of handhelds -->
+                <!-- start of tabletops -->
+                <header class="my-6">
+                    <h4 class="is-size-3 is-size-4-mobile has-text-weight-bold">Using Tabletops</h4>
+                </header>
+                <figure class="image">
+                    <img src="https://m.media-amazon.com/images/I/716XC-m0iZL._AC_SX425_.jpg" alt="hotwire tabletop"
+                        loading="lazy">
+                </figure>
+                <a class="button is-warning is-justify-content-center my-6" href="https://a.co/d/1FsMaXa"
+                    target="_blank" rel="noopener follow" title="View Amazon">
+                    <span class="icon">
+                        <i class="fa-brands fa-amazon"></i>
+                    </span>
+                    <span>Amazon</span>
+                </a>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        A hotwire tabletop is a more
+                        long term option. If choosing a tabletop
+                        we suggest you use polystyrene squares or blocks to make your circles.
+                        You can buy a sheet of polystyrene, and cut small squares when you need to
+                        make a bouquet base.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Some hotwire tabletops come with an attachment that
+                        lets you create perfect circles easily.
+                        This attachment is placed on an adjustable guide arm ("dimension ruler"), and
+                        has
+                        a spike to hold your polystyrene.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Place the piece of polystyrene on the attachment.
+                        Move the guide arm and the attachment close to your
+                        hotwire pillar.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Turn your hotwire temperature up, wait until it heats up, then
+                        slowly rotate your polystyrene completely until your circle is done, turn your
+                        hotwire off.
+                        The spike keeps the polystyrene in place, whilst the hotwire is cutting off the
+                        unnecessary ends.
+                    </p>
+                </div>
+                <div class="block">
+                    <figure class="image is-flex is-justify-content-center">
+                        <iframe width="560" height="315" loading="lazy"
+                            src="https://www.youtube.com/embed/PDUGLNdQD6I?start=5&end=18" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </figure>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        You will need to cut multiple circles for one bouquet.
+                        For example,
+                        you may need one circle with a 2.6 inch diameter
+                        for the bottom of the vase, and another that is 3 inches
+                        for the top of the vase.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Remember a circle's radius is half the size of a circle. If you need a
+                        circle that is 3 inches long, it must have a 1.5 inch radius. From your hotwire,
+                        measure 1.5 inches, and move your guide arm to this spot.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Make sure your polystyrene
+                        is centered on the spike, and start cutting. Depending on your
+                        measurements, and how much your hotwire
+                        takes off, your circle should be around the desired 3 inch length.
+                    </p>
+                </div>
+                <div class="buttons is-justify-content-center my-6">
+                    <a class="button is-warning" href="https://www.amazon.com/s?k=hot+wire+tabletop&ref=nb_sb_noss"
+                        target="_blank" rel="noopener follow" title="View Amazon">
+                        <span class="icon">
+                            <i class="fa-brands fa-amazon"></i>
+                        </span>
+                        <span>Amazon</span>
+                    </a>
+                    <a class="has-text-light button is-success" href="https://ebay.us/dSihgc" target="_blank"
+                        rel="noopener sponsored" title="View Ebay">
+                        <span class="icon">
+                            <i class="fa-brands fa-ebay"></i>
+                        </span>
+                        <span>Ebay Affiliate</span>
+                    </a>
+                </div>
+                <!-- end of tabletops -->
             </section>
             <!-- end of hotwire -->
             <!-- start of step 4 -->
-            <section class="section">
-                <header class="container has-text-centered my-6">
-                    <h2 class="is-size-2 has-text-weight-bold">Step 4: Glue your flowers</h2>
+            <section
+                class="section is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered">
+                <header class="my-6">
+                    <h2 class="is-size-2 is-size-3-mobile has-text-weight-bold">Step 4: Glue your flowers</h2>
                 </header>
-                <!-- start of two columns -->
-                <div class="section">
-                    <div class="columns is-vcentered has-text-centered">
-                        <div class="column">
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    The final step is to separate each stem, and glue each
-                                    into your bouquet base.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    Use an outdoor glue like Mod Podge
-                                    Outdoor since it is made to
-                                    resist outdoor conditions.
-                                </p>
-                            </div>
-                            <div class="block">
-                                <p class="is-size-4-mobile is-size-4-tablet is-size-3">
-                                    You can also use Mod Podge Outdoor
-                                    to seal your bouquet base. This will give
-                                    your bouquet base an extra weather barrier.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img srcset="images/article1/red-bouquet.webp 445w,
-                                        images/article1/red-bouquet-small.webp 245w" sizes="(max-width: 450px) 245px"
-                                            loading="lazy" alt="red silk flower bouquet">
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <figure class="section article-img">
+                    <img src="images/article1/red-bouquet-small.webp" srcset="images/article1/red-bouquet.webp 445w,
+                    images/article1/red-bouquet-small.webp 245w" sizes="(max-width: 450px) 245px" loading="lazy"
+                        alt="red silk flower bouquet" class="article-tall-img">
+                </figure>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        The final step is to separate each stem, and glue each
+                        into your bouquet base.
+                    </p>
                 </div>
-                <!-- end of two columns -->
-                <!-- start of buttons -->
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        Use an outdoor glue like Mod Podge
+                        Outdoor since it is made to
+                        resist outdoor conditions.
+                    </p>
+                </div>
+                <div class="block">
+                    <p class="is-size-4-mobile is-size-3">
+                        You can also use Mod Podge Outdoor
+                        to seal your bouquet base. This will give
+                        your bouquet base an extra weather barrier.
+                    </p>
+                </div>
                 <div class="buttons is-justify-content-center my-6">
                     <a class="button is-warning"
                         href="https://www.amazon.com/Mod-Podge-Waterbase-Outdoor-CS11220/dp/B001681ZA4/ref=sr_1_1?crid=G2GCNNJNSSOX&keywords=mod%2Bpodge%2Boutdoor&qid=1683184158&sprefix=mod%2Bpodge%2Boutdo%2Caps%2C158&sr=8-1&th=1"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Amazon">
                         <span class="icon">
                             <i class="fa-brands fa-amazon"></i>
                         </span>
                         <span>Amazon</span>
                     </a>
                     <a class="has-text-light button is-success" href="https://ebay.us/qDTwUB" target="_blank"
-                        rel="noopener noreferrer sponsored">
+                        rel="noopener sponsored" title="View Ebay">
                         <span class="icon">
                             <i class="fa-brands fa-ebay"></i>
                         </span>
@@ -692,7 +603,7 @@
                     </a>
                     <a class="has-text-light button is-info"
                         href="https://www.hobbylobby.com/Crafts-Hobbies/Glue-Adhesives/Liquid/Mod-Podge-Outdoor/p/93932"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Hobby Lobby">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
@@ -700,31 +611,24 @@
                     </a>
                     <a class="has-text-light button is-danger"
                         href="https://www.michaels.com/search?q=modpodge%20outdoor&com_id=SearchBar_Recommendation_Components&path=suggest"
-                        target="_blank" rel="noopener noreferrer follow">
+                        target="_blank" rel="noopener follow" title="View Michaels">
                         <span class="icon">
                             <i class="fa-solid fa-bag-shopping"></i>
                         </span>
                         <span>Michaels</span>
                     </a>
                 </div>
-                <!-- end of buttons -->
             </section>
             <!-- end of step 4 -->
-
-            <!-- end of article body -->
-
             <!-- start of article footer -->
-            <section class="section has-background-light">
-                <footer class="section has-text-centered">
-                    <div class="block">
-                        <p class="is-size-4 is-italic">
-                            Article by: Rosy Arc
-                        </p>
-                    </div>
-                    <div class="block">
-                        <!-- ShareThis BEGIN -->
-                        <div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                    </div>
+            <section class="section has-background-light has-text-centered">
+                <footer class="my-6">
+                    <p class="is-size-4 is-italic">
+                        Article by: Rosy Arc
+                    </p>
+                    <!-- ShareThis BEGIN -->
+                    <div class="sharethis-inline-share-buttons"></div>
+                    <!-- ShareThis END -->
                 </footer>
             </section>
             <!-- end of article footer -->
@@ -739,8 +643,8 @@
                 <i class="fa-solid fa-cookie-bite fa-xl" style="color: #663300;"></i>
             </span>
             <p>
-                Just so you know, this site uses cookies.
-                <a href="https://www.cookiesandyou.com/" target="_blank" rel="noopener noreferrer"
+                Just so you know, this page uses cookies.
+                <a href="https://www.cookiesandyou.com/" target="_blank" rel="noopener"
                     class="has-text-info is-underlined">
                     What are cookies?
                 </a>
@@ -751,26 +655,26 @@
     <button id="top" class="is-hidden button has-background-black has-text-light py-4 px-4">Top</button>
     <!-- start of footer -->
     <footer class="footer has-background-black">
-        <div id="footer" class="columns mt-6">
-            <div class="column">
+        <div class="columns mt-6">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Shop</p>
                     <p><a class="has-text-light is-underlined" href="https://www.ebay.com/usr/rosyarc" target="_blank"
-                            rel="noopener noreferrer follow">Ebay</a></p>
+                            rel="noopener follow" title="View Ebay Store">Ebay</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.pinterest.com/ihavearosyarc/"
-                            target="_blank" rel="noopener noreferrer follow">Pinterest</a></p>
+                            target="_blank" rel="noopener follow" title="View Pinterest">Pinterest</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.redbubble.com/people/rosyarc/shop"
-                            target="_blank" rel="noopener noreferrer follow">Redbubble</a></p>
+                            target="_blank" rel="noopener follow" title="View Redbubble Designs">Redbubble</a></p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">About</p>
                     <p class="has-text-light">Rosy Arc is a small business that provides quality flower arrangements at
                         an affordable price.</p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Products</p>
                     <p>Bouquets</p>
@@ -779,14 +683,16 @@
                 </div>
             </div>
         </div>
-        <!-- end of columns -->
         <div class="section">
             <div class="container has-text-centered has-text-light">
                 <p>
                     Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    <span id="year">
+                        <script>
+                            const year = document.querySelector('#year');
+                            year.innerHTML = new Date().getFullYear();
+                        </script>
+                    </span>
                     by Rosy Arc. All Rights Reserved.
                 </p>
             </div>
@@ -795,6 +701,7 @@
     <!-- end of footer -->
     <script src="js/global.js"></script>
     <script src="js/article.js"></script>
+
 </body>
 
 </html>

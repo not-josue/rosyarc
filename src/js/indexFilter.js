@@ -1,42 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // filter for tabs on index.html
-    // tabs
-    const tabs = document.querySelectorAll('.tabs li');
-    //console.log(tabs);
 
-    // tab content
-    const tabContent = document.querySelectorAll('#tab-content div');
-    //console.log(tabContent);
+    const measurementList = document.querySelectorAll('#measurement-list li');
+    const measurementDetails = document.querySelectorAll('#measurement-details div');
+    const measurementImg = document.querySelectorAll('#measurement-img div.card');
 
-    // images
-    const tabImg = document.querySelectorAll('#cards .card');
-    //console.log(tabImg);
-
-    tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-            // remove active class
-            tabs.forEach(item => item.classList.remove('is-active'));
-            // add active class
-            tab.classList.add('is-active');
-            // match data target of tab clicked with id of tabContent and data target of tabImg
-            const target = tab.dataset.target;
-            // console.log(target);
-            // show tabbed content
-            tabContent.forEach(div => {
-                if (div.getAttribute('id') === target) {
-                    div.classList.remove('is-hidden');
+    measurementList.forEach((i) => {
+        i.onclick = () => {
+            // remove is-active class from all
+            measurementList.forEach((i) => {
+                i.classList.remove('is-active');
+            });
+            // add is-active class to clicked element
+            i.classList.add('is-active');
+            // match data target of clicked element to id
+            const target = i.dataset.target;
+            measurementDetails.forEach((detail) => {
+                if (detail.getAttribute('id') === target) {
+                    detail.classList.remove('is-hidden');
                 } else {
-                    div.classList.add('is-hidden');
+                    detail.classList.add('is-hidden');
                 }
             });
-            // show tabbed image
-            tabImg.forEach(img => {
+            // match button data target with img data target
+            measurementImg.forEach((img) => {
                 if (img.getAttribute('data-target') === target) {
                     img.classList.remove('is-hidden');
                 } else {
                     img.classList.add('is-hidden');
                 }
             });
-        });
+        }
     });
-});
+
+})

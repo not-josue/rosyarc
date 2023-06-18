@@ -1,0 +1,22 @@
+.hero {
+    background-image: url(../../images/index/flower-arrangement-hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 950px) {
+
+    .hero {
+
+        background-image: url(../../images/index/flower-arrangement-hero-medium.webp);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .hero {
+
+        background-image: url(../../images/index/flower-arrangement-hero-small.webp);
+    }
+}

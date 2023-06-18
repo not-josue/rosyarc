@@ -1,0 +1,10 @@
+article {
+
+    p:not(:first-child) {
+        max-width: 60vw !important;
+    }
+
+    .block {
+        max-width: 60vw !important;
+    }
+}

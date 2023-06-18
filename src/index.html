@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title>Rosy Arc Home</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,74 +11,96 @@
     <meta name="keywords" content="rosy arc, silk flower arrangements, cemetery flowers" />
     <meta name="author" content="Rosy Arc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/rosy-arc-favicon.svg" />
+    <!-- bulma and fontawesome -->
     <link rel="stylesheet" href="mybulma/css/mystyles.css" />
     <script src="https://kit.fontawesome.com/dc7be97532.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
 
     <!-- start of navigation -->
     <nav class="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- logo, justify content for burger -->
-        <div class="navbar-brand is-justify-content-space-between">
-            <a class="navbar-item pl-5 py-5" href="index.html">
-                <img src="images/rosy-arc-logo-2023.svg" alt="rosy arc logo" style="max-height: 70px">
-                <p class="navbar-item has-text-light has-text-weight-semibold is-size-3">
+        <!-- start navbar brand: justify content for burger -->
+        <div class="navbar-brand is-justify-content-space-between is-align-items-center py-3">
+            <a class="navbar-item ml-4" href="index.html" title="Rosy Arc Home">
+                <img id="logo" src="images/logo.svg" alt="logo">
+                <p class="navbar-item has-text-white has-text-weight-semibold is-size-3">
                     Rosy Arc
                 </p>
             </a>
-            <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+
+            <a id="burger" role="button" class="navbar-burger mr-4" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample" title="Open Dropdown">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu pr-5" id="navlinks">
-            <!-- hidden on mobile -->
+        <!-- end navbar brand -->
+        <!-- start navbar menu -->
+        <div id="navlinks" class="navbar-menu pr-6">
             <div class="navbar-end">
-                <a href="index.html" class="navbar-item is-size-4 is-active">
-                    <p>Home</p>
-                </a>
-                <a href="gallery.html" class="navbar-item is-size-4">
-                    <p>Gallery</p>
-                </a>
-                <div class="navbar-item is-size-4 is-hoverable has-dropdown">
-                    <p class="navbar-link">
-                        Articles
+                <a class="navbar-item is-size-4 is-active" href="index.html" title="Rosy Arc Home">
+                    <p>
+                        Home
                     </p>
+                </a>
+
+                <a class="navbar-item is-size-4" href="gallery.html" title="Rosy Arc Gallery">
+                    <p>
+                        Gallery
+                    </p>
+                </a>
+                <!-- start dropdown -->
+                <div class="navbar-item is-size-4 has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Articles
+                    </a>
+
                     <div class="navbar-dropdown">
-                        <a href="diy-cemetery-bouquet.html" class="navbar-item is-size-5">
-                            DIY Cemetery Bouquet
+                        <a class="navbar-item is-size-5" href="diy-cemetery-bouquet.html" title="View Article">
+                            <p>
+                                DIY Cemetery Bouquet
+                            </p>
                         </a>
                     </div>
                 </div>
-                <a href="about.html" class="navbar-item is-size-4">
-                    <p>About</p>
+                <!-- end dropdown -->
+                <a class="navbar-item is-size-4" href="about.html" title="Rosy Arc About">
+                    <p>
+                        About
+                    </p>
                 </a>
             </div>
         </div>
+        <!-- end navbar menu -->
     </nav>
     <!-- end of navigation -->
     <!-- start of hero -->
-    <div role="banner" class="hero is-black is-fullheight">
+    <section aria-roledescription="banner" class="hero is-black is-fullheight">
         <div class="hero-body">
-            <div class="container has-text-light">
+            <div class="container has-text-white has-text-centered">
                 <h1 class="is-size-2 has-text-weight-semibold">Your source for silk flower arrangements</h1>
             </div>
         </div>
-    </div>
+    </section>
     <!-- end of hero -->
     <main>
         <!-- start design -->
         <section class="section">
-            <header class="container has-text-centered my-6">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Design</h2>
             </header>
             <!-- start of 3 columns-->
             <div class="section">
-                <div id="design" class="columns is-vcentered has-text-centered">
-                    <div class="column">
+                <div class="columns is-vcentered has-text-centered">
+                    <div class="column block">
                         <div class="card">
                             <div class="card-image">
                                 <figure class="image is-3by2">
@@ -88,7 +111,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Arrangement</h3>
                         <p class="is-size-4-mobile is-size-3">
                             Each arrangement is created by one designer from beginning to end, conveying its
@@ -100,30 +123,30 @@
             </div>
             <!-- end of 3 columns-->
         </section>
-        <!-- end of design -->
+        <!-- end design -->
         <!-- start products -->
         <section class="section has-background-light">
-            <header class="container has-text-centered my-6">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Products</h2>
             </header>
             <!-- start of 3 columns-->
-            <div id="products" class="section">
+            <div class="section">
                 <div class="columns has-text-centered">
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Bouquets</h3>
                         <p class="is-size-4-mobile is-size-3">A detachable bouquet
                             of flowers glued to polystyrene that can be bought
                             with or without a green ground vase.
                         </p>
                     </div>
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Saddles</h3>
                         <p class="is-size-4-mobile is-size-3">
                             An array of flowers glued and wired to a
                             metal frame that can be fit over a headstone.
                         </p>
                     </div>
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Memorials</h3>
                         <p class="is-size-4-mobile is-size-3">
                             A cut polystyrene shape that is decorated
@@ -138,143 +161,146 @@
         <!-- end of products -->
         <!-- start of measurements -->
         <section class="section has-background-black has-text-light">
-            <header class="container has-text-centered py-3">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Measurements</h2>
             </header>
-            <div class="columns">
-                <!-- start of column -->
-                <div class="column">
-                    <!-- start of tabs -->
-                    <div class="tabs is-toggle is-centered my-6">
-                        <div class="container">
-                            <ul>
-                                <li class="is-active" data-target="bouquets"><a>Bouquets</a></li>
-                                <li data-target="saddles"><a>Saddles</a></li>
-                                <li data-target="memorials"><a>Memorials</a></li>
-                            </ul>
+            <div class="section">
+                <!-- start of columns -->
+                <div class="columns is-vcentered has-text-centered">
+                    <!-- start of column -->
+                    <div class="column block">
+                        <!-- start of tabs -->
+                        <div class="tabs is-toggle is-centered">
+                            <div class="container">
+                                <ul id="measurement-list">
+                                    <li class="is-active" data-target="bouquets"><a title="View Bouquet Details">Bouquets</a></li>
+                                    <li data-target="saddles"><a title="View Saddle Details">Saddles</a></li>
+                                    <li data-target="memorials"><a title="View Memorial Details">Memorials</a></li>
+                                </ul>
+                            </div>
                         </div>
+                        <!-- end of tabs -->
+                        <!-- start of tab content -->
+                        <div id="measurement-details" class="has-text-centered">
+                            <div id="bouquets" class="">
+                                <h3 class="title has-text-light">Bouquets</h3>
+                                <p class="has-text-light">
+                                    Flat-Bottom Vase
+                                    <br>Vase Height: 6" + 3" clip-on stem
+                                    <br>Vase Diameter: Top ~ 4", Bottom ~ 2.4"
+                                    <br>Polystyrene is cut to be detachable.
+                                    <br>Can be bought without vase.
+                                    <br>Price: $30 - $45
+                                </p>
+                            </div>
+                            <div id="saddles" class="is-hidden">
+                                <h3 class="title has-text-light">Saddles</h3>
+                                <p class="has-text-light">
+                                    Metal Frame
+                                    <br>Frame Length: 17"
+                                    <br>Frame Width: 10.5"
+                                    <br>Saddle: ~ 20" <span class="is-size-7">x</span> 16" <span
+                                        class="is-size-7">x</span>
+                                    12"
+                                    <br>Price: $70+
+                                </p>
+                            </div>
+                            <div id="memorials" class="is-hidden">
+                                <h3 class="title has-text-light">Memorials</h3>
+                                <p class="has-text-light">
+                                    Sealed Polystyrene
+                                    <br>Height: 17"
+                                    <br>Length: 10"
+                                    <br>Width: 2"
+                                    <br>Easel NOT included
+                                    <br>Price: $30
+                                </p>
+                            </div>
+                        </div>
+                        <!-- end of tab content -->
                     </div>
-                    <!-- end of tabs -->
-                    <!-- start of tab content -->
-                    <div id="tab-content" class="has-text-centered">
-                        <div id="bouquets" class="">
-                            <h3 class="title has-text-light">Bouquets</h3>
-                            <p class="has-text-light">
-                                Flat-Bottom Vase
-                                <br>Vase Height: 6" + 3" clip-on stem
-                                <br>Vase Diameter: Top ~ 4", Bottom ~ 2.4"
-                                <br>Polystyrene is cut to be detachable.
-                                <br>Can be bought without vase.
-                                <br>Price: $30 - $45
-                            </p>
-                        </div>
-                        <div id="saddles" class="is-hidden">
-                            <h3 class="title has-text-light">Saddles</h3>
-                            <p class="has-text-light">
-                                Metal Frame
-                                <br>Frame Length: 17"
-                                <br>Frame Width: 10.5"
-                                <br>Saddle: ~ 20" <span class="is-size-7">x</span> 16" <span class="is-size-7">x</span>
-                                12"
-                                <br>Price: $70+
-                            </p>
-                        </div>
-                        <div id="memorials" class="is-hidden">
-                            <h3 class="title has-text-light">Memorials</h3>
-                            <p class="has-text-light">
-                                Sealed Polystyrene
-                                <br>Height: 17"
-                                <br>Length: 10"
-                                <br>Width: 2"
-                                <br>Easel NOT included
-                                <br>Price: $30
-                            </p>
-                        </div>
-                    </div>
-                    <!-- end of tab content -->
-                </div>
-                <!-- end of column -->
-                <!-- start of column-->
-                <div id="cards" class="column">
-                    <!-- start of filtered images -->
-                    <div class="card my-6" data-target="bouquets">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img srcset="images/index/red-bouquet01.webp  834w,
+                    <!-- end of column -->
+                    <!-- start of column-->
+                    <div id="measurement-img" class="column block">
+                        <!-- start of filtered images -->
+                        <div class="card" data-target="bouquets">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img srcset="images/index/red-bouquet01.webp  834w,
                          images/index/red-bouquet01-small.webp 425w" sizes="(max-width: 450px) 425px"
-                                    alt="blue and white bouquet" loading="lazy">
-                            </figure>
+                                        alt="blue and white bouquet" loading="lazy">
+                                </figure>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-6 is-hidden" data-target="saddles">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img srcset="images/index/purple-saddle01.webp  696w,
+                        <div class="card is-hidden" data-target="saddles">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img srcset="images/index/purple-saddle01.webp  696w,
                          images/index/purple-saddle01-small.webp 398w" sizes="(max-width: 450px) 398px"
-                                    alt="purple saddle" loading="lazy">
-                            </figure>
+                                        alt="purple saddle" loading="lazy">
+                                </figure>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card my-6 is-hidden" data-target="memorials">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img srcset="images/index/white-cross01.webp  578w,
+                        <div class="card is-hidden" data-target="memorials">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img srcset="images/index/white-cross01.webp  578w,
                          images/index/white-cross01-small.webp 416w" sizes="(max-width: 450px) 416px" alt="white cross"
-                                    loading="lazy">
-                            </figure>
+                                        loading="lazy">
+                                </figure>
+                            </div>
                         </div>
+                        <!-- end of filtered images -->
                     </div>
-                    <!-- end of filtered images -->
+                    <!-- end of column -->
                 </div>
-                <!-- end of column -->
+                <!-- end of columns -->
             </div>
-            <!-- end of columns -->
         </section>
         <!-- end of measurements-->
         <!-- start purchasing -->
         <section class="section has-background-primary has-text-light">
-            <header class="container has-text-centered my-6">
+            <header class="has-text-centered my-6">
                 <h2 class="is-size-2 has-text-weight-bold">Purchase</h2>
             </header>
             <!-- start of 3 columns-->
             <div class="section">
-                <div id="purchase" class="columns has-text-centered">
-                    <div class="column">
-                        <h3 class="title has-text-light">Gallery</h3>
-                        <p class="is-size-4-mobile is-size-3">
+                <div class="columns has-text-centered">
+                    <div class="column block">
+                        <h3 class="title has-text-light block">Gallery</h3>
+                        <p class="is-size-4-mobile is-size-3 block">
                             You can view some of our previous
                             designs on our gallery page.
                         </p>
-                        <a class="has-text-light button is-medium is-success my-6" href="gallery.html">
+                        <a class="has-text-light button is-medium is-success block" href="gallery.html" title="Rosy Arc Gallery">
                             <span class="icon">
                                 <i class="fa-regular fa-images"></i>
                             </span>
                             <span>View Designs</span>
                         </a>
                     </div>
-                    <div class="column">
-                        <h3 class="title has-text-light">Store</h3>
-                        <p class="is-size-4-mobile is-size-3">
+                    <div class="column block">
+                        <h3 class="title has-text-light block">Store</h3>
+                        <p class="is-size-4-mobile is-size-3 block">
                             To view our current inventory, visit
                             our store page on Ebay.
                         </p>
-                        <a class="has-text-light button is-medium is-success my-6"
-                            href="https://www.ebay.com/usr/rosyarc" target="_blank" rel="noopener noreferrer follow">
+                        <a class="has-text-light button is-medium is-success block"
+                            href="https://www.ebay.com/usr/rosyarc" target="_blank" rel="noopener follow" title="View Ebay Store">
                             <span class="icon">
                                 <i class="fa-solid fa-store"></i>
                             </span>
                             <span>Shop Inventory</span>
                         </a>
                     </div>
-                    <div class="column">
-                        <h3 class="title has-text-light">Social Media</h3>
-                        <p class="is-size-4-mobile is-size-3">
+                    <div class="column block">
+                        <h3 class="title has-text-light block">Social Media</h3>
+                        <p class="is-size-4-mobile is-size-3 block">
                             Connect with us on social media
                             to keep up to date with our latest designs.
                         </p>
-                        <a class="has-text-light button is-medium is-success my-6"
-                            href="https://www.pinterest.com/ihavearosyarc/" target="_blank"
-                            rel="noopener noreferrer follow">
+                        <a class="has-text-light button is-medium is-success block"
+                            href="https://www.pinterest.com/ihavearosyarc/" target="_blank" rel="noopener follow" title="View Pinterest">
                             <span>Follow on </span>
                             <span class="icon">
                                 <i class="fa-brands fa-pinterest"></i>
@@ -292,22 +318,22 @@
                 <h2 class="is-size-2 has-text-weight-bold">Process</h2>
             </header>
             <!-- start of 3 columns-->
-            <div id="process" class="section">
+            <div class="section">
                 <div class="columns has-text-centered">
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Bouquets</h3>
-                        <p class="is-size-4-mobile is-size-3">Each flower is glued on sealed
-                            polystyrene. The
+                        <p class="is-size-4-mobile is-size-3">
+                            Each flower is glued on polystyrene. The
                             bouquets are detachable so can be moved to another vase.
                         </p>
                     </div>
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Saddles</h3>
                         <p class="is-size-4-mobile is-size-3">Sealed polystyrene is glued and wired
                             to
                             the saddle frame before flowers are added.</p>
                     </div>
-                    <div class="column">
+                    <div class="column block">
                         <h3 class="title">Memorials</h3>
                         <p class="is-size-4-mobile is-size-3">Polystyrene is cut with hotwire. The
                             designer then paints, and seals the base. Flowers are added at the end.
@@ -316,8 +342,8 @@
                 </div>
             </div>
             <!-- end of 3 columns-->
-            <div class="container has-text-centered">
-                <a class="has-text-light button is-large is-primary has-background-primary mb-6" href="about.html">
+            <div class="has-text-centered">
+                <a class="has-text-light button is-large is-primary has-background-primary mb-6" href="about.html" title="Rosy Arc About">
                     <span class="icon">
                         <i class="fa-solid fa-circle-check"></i>
                     </span>
@@ -331,26 +357,26 @@
     <button id="top" class="is-hidden button has-background-black has-text-light py-4 px-4">Top</button>
     <!-- start of footer -->
     <footer class="footer has-background-black">
-        <div id="footer" class="columns mt-6">
-            <div class="column">
+        <div class="columns mt-6">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Shop</p>
                     <p><a class="has-text-light is-underlined" href="https://www.ebay.com/usr/rosyarc" target="_blank"
-                            rel="noopener noreferrer follow">Ebay</a></p>
+                            rel="noopener follow" title="View Ebay Store">Ebay</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.pinterest.com/ihavearosyarc/"
-                            target="_blank" rel="noopener noreferrer follow">Pinterest</a></p>
+                            target="_blank" rel="noopener follow" title="View Pinterest">Pinterest</a></p>
                     <p><a class="has-text-light is-underlined" href="https://www.redbubble.com/people/rosyarc/shop"
-                            target="_blank" rel="noopener noreferrer follow">Redbubble</a></p>
+                            target="_blank" rel="noopener follow" title="View Redbubble Designs">Redbubble</a></p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">About</p>
                     <p class="has-text-light">Rosy Arc is a small business that provides quality flower arrangements at
                         an affordable price.</p>
                 </div>
             </div>
-            <div class="column">
+            <div class="column block">
                 <div class="content has-text-centered has-text-light">
                     <p class="is-size-3">Products</p>
                     <p>Bouquets</p>
@@ -363,15 +389,19 @@
             <div class="container has-text-centered has-text-light">
                 <p>
                     Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
+                    <span id="year">
+                        <script>
+                            const year = document.querySelector('#year');
+                            year.innerHTML = new Date().getFullYear();
+                        </script>
+                    </span>
                     by Rosy Arc. All Rights Reserved.
                 </p>
             </div>
         </div>
     </footer>
     <!-- end of footer -->
+
     <script src="js/global.js"></script>
     <script src="js/indexFilter.js"></script>
 

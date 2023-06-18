@@ -1,0 +1,10 @@
+@use '../abstracts/colors' as *;
+
+.tabs {
+
+    .is-active a{
+        background-color: $secondary !important;
+        border-bottom-color: initial !important;
+        border-color: initial !important;
+    }
+}

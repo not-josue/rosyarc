@@ -1,0 +1,58 @@
+@use '../abstracts/colors' as *;
+
+.navbar {
+
+    border-bottom: 5px solid $secondary;
+
+    #logo {
+        max-height: 70px !important;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    .navbar-menu {
+
+        .is-active {
+            color: $primary !important;
+        }
+
+        :hover {
+            color: $secondary !important;
+        }
+    }
+
+    .navbar-end {
+
+        a.is-active,
+        a:hover {
+            background-color: initial !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    .navbar-end {
+
+        a.is-active p {
+            border-bottom: solid 2px $primary !important;
+        }
+
+        a:hover p {
+            border-bottom: solid 2px $secondary !important;
+        }
+    }
+
+    .navbar-dropdown {
+
+        a:hover {
+            background-color: initial !important;
+        }
+
+        a.is-active {
+            background-color: initial !important;
+            color: $dark-gray !important;
+        }
+    }
+}

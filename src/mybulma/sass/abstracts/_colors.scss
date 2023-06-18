@@ -1,0 +1,33 @@
+// brand colors
+
+$orange: #ff851b;
+$green: #2ecc40;
+
+$primary: $orange;
+$secondary: $green;
+
+// other colors
+
+$pink: #e9a0a0;
+$purple: #b10dc9;
+$peach: #f6c492;
+
+$dark-gray: #4a4a4a;
+$light-gray: #e6e6e6;
+
+.has-background-secondary {
+    background-color: $secondary !important;
+}
+
+// filter buttons
+.has-background-pink {
+    background-color: $pink !important;
+}
+
+.has-background-purple {
+    background-color: $purple !important;
+}
+
+.has-background-peach {
+    background-color: $peach !important;
+}

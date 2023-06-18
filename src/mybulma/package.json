@@ -1,6 +1,6 @@
 {
-  "name": "mybulma",
-  "version": "1.0.0",
+  "name": "rosyarc",
+  "version": "2.0.0",
   "description": "rosyarc",
   "main": "sass/mystyles.scss",
   "scripts": {
@@ -9,14 +9,14 @@
     "start": "npm run css-watch"
   },
   "keywords": [
-    "bulma",
-    "sass",
-    "rosyarc"
+    "rosyarc",
+    "html5",
+    "bulma-css"
   ],
-  "author": "Rosy Arc",
-  "license": "ISC",
+  "author": "rosyarc",
+  "license": "UNLICENSED",
   "devDependencies": {
     "bulma": "^0.9.4",
-    "node-sass": "^8.0.0"
+    "node-sass": "^9.0.0"
   }
 }

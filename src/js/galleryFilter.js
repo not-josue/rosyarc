@@ -1,12 +1,11 @@
-// text color for filter buttons
 document.addEventListener('DOMContentLoaded', () => {
     textColor();
     filterGallery();
 });
 
+// text color for filter buttons
 function textColor() {
     const filter = document.querySelectorAll('.column button');
-    //console.log(filter);
     filter.forEach((button) => {
         if (button.innerText !== 'All'
             && button.innerText !== 'Crosses'
@@ -23,13 +22,10 @@ function textColor() {
 function filterGallery() {
     const filter = document.querySelectorAll('.column button');
     const img = document.querySelectorAll('div.is-4');
-    //console.log(img);
 
     filter.forEach((button) => {
         button.addEventListener('click', () => {
             const value = button.getAttribute('data-color');
-
-
 
             button.classList.add('is-active-secondary');
 
