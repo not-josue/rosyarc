@@ -56,19 +56,22 @@ button.delete {
     background-color: initial !important;
     color: #4a4a4a !important; } }
 
-.hero {
-  background-image: url(../../images/index/flower-arrangement-hero.webp);
+.is-fullheight-with-navbar {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9; }
 
-@media screen and (max-width: 950px) {
-  .hero {
+@media screen and (max-width: 500px) {
+  .is-fullheight-with-navbar {
+    background-image: url(../../images/index/flower-arrangement-hero-small.webp); } }
+
+@media screen and (min-width: 501px) {
+  .is-fullheight-with-navbar {
     background-image: url(../../images/index/flower-arrangement-hero-medium.webp); } }
 
-@media screen and (max-width: 500px) {
-  .hero {
-    background-image: url(../../images/index/flower-arrangement-hero-small.webp); } }
+@media screen and (min-width: 951px) {
+  .is-fullheight-with-navbar {
+    background-image: url(../../images/index/flower-arrangement-hero.webp); } }
 
 @use '../abstracts/colors' as *;
 .tabs .is-active a {
