@@ -58,6 +58,7 @@ button.delete {
 
 .is-fullheight-with-navbar {
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   opacity: 0.9; }
 
