@@ -1,40 +1,49 @@
 # rosyarc
 
-[![Bulma](https://img.shields.io/badge/Bulma-0.9.4-00d1b2?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA+VBMVEUAAAD///////////////////////////////////////////////////////////////////////////+pJyiSAAAAD3RSTlMAMsD7eNQ98d/yw7VWPyk8gduyV3qPfMvHjWeYCsAAABCSURBVBhXYxhDoSgAAzg8d0NFA4AQFCA4AC4IC4jQ0NC5k5i5E5w5zr5////QBFyCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNi0wOVQxMjoxNjo1MSswMDowMDqrY+sAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDYtMDlUMTI6MTY6NTErMDA6MDBj5EwAAAAASUVORK5CYII=)](https://bulma.io) [![Node-Sass 9.0](https://img.shields.io/badge/Node--Sass-9.0-%23c6538c.svg)](https://www.npmjs.com/package/node-sass)
+[![Bulma](https://img.shields.io/badge/Bulma-0.9.4-00d1b2?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA+VBMVEUAAAD///////////////////////////////////////////////////////////////////////////+pJyiSAAAAD3RSTlMAMsD7eNQ98d/yw7VWPyk8gduyV3qPfMvHjWeYCsAAABCSURBVBhXYxhDoSgAAzg8d0NFA4AQFCA4AC4IC4jQ0NC5k5i5E5w5zr5////QBFyCgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMi0wNi0wOVQxMjoxNjo1MSswMDowMDqrY+sAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjItMDYtMDlUMTI6MTY6NTErMDA6MDBj5EwAAAAASUVORK5CYII=)](https://bulma.io) [![Vite](https://img.shields.io/badge/Vite-4.4.5-646CFF)](https://vitejs.dev)
 
 
-Website for a small business that sells flower arrangements online. Made with Bulma CSS, customized in Node-Sass.
+Flower themed website for an Ebay seller that specializes in flower arrangements. Made with Bulma CSS customized in SASS, JavaScript, and Vite as a bundler.
 
-Images have been omitted.
+Brand images have been omitted.  
+Articles have been omitted.
 
-## Scripts
+## Languages/Frameworks
 
-- navigation dropdown for burger icon
-- go to Top button
-- multiple image filters
-- cookie notification
-- styling for buttons
+- Bulma CSS
+- HTML
+- JavaScript
+- SASS
 
-## Responsiveness  
+## Tools
 
-![rosyarc-mockup](https://github.com/not-josue/rosyarc/assets/129870578/249e0038-b101-447b-86f8-4bd853ff8001)
+- [Bootstrap Icons](https://icons.getbootstrap.com/) for icons/svgs
+- [Favicon.io](https://favicon.io/) as a favicon generator
+- [FontAwesome](https://fontawesome.com/) for icons/svgs
+- [ImageKit](https://imagekit.io/) for image management
+- [InkScape](https://inkscape.org/) for graphic design / image compression
+- [PowerShell](https://apps.microsoft.com/detail/powershell/9MZ1SNWT0N5D?hl=en-us&gl=US) as a terminal
+- [Semrush](https://www.semrush.com/) for SEO
+- [TechSini](https://techsini.com/multi-mockup/) for website mockups
+- [Vite JS](https://vitejs.dev/) for frontend tooling
+- [VSCode](https://code.visualstudio.com/) as a code editor
 
 ## Home 
-🚀 [Live Page](https://www.rosyarc.com/)
+🚀 [Live Page](https://rosyarc.com/)
 
-![index](https://github.com/not-josue/rosyarc/assets/129870578/a9a597d2-3ef2-44e0-ad6d-b623cbec318a)
+![rosyarc-home](https://github.com/not-josue/rosyarc/assets/129870578/2b21253d-c8a3-4fe1-a7a7-52b4a132f5f2)
 
 ## Gallery 
-🚀 [Live Page](https://www.rosyarc.com/gallery.html)
+🚀 [Live Page](https://rosyarc.com/gallery/)
 
-![gallery](https://github.com/not-josue/rosyarc/assets/129870578/c4ff8047-79dc-4d12-847f-6ffe8fba4d69)
-
-## Article 
-🚀 [Live Page](https://www.rosyarc.com/diy-cemetery-bouquet.html)
-
-![article1](https://github.com/not-josue/rosyarc/assets/129870578/3ba138d2-8ba7-4a68-a78d-0f29febfb1fe)
+![rosyarc-gallery](https://github.com/not-josue/rosyarc/assets/129870578/8c23431c-b5fd-4d90-9fec-b0fcd000f3f8)
 
 ## About 
-🚀 [Live Page](https://www.rosyarc.com/about.html)
+🚀 [Live Page](https://rosyarc.com/about/)
 
-![about](https://github.com/not-josue/rosyarc/assets/129870578/867fe586-689c-4657-b8e1-74e7703990f6)
+![rosyarc-about](https://github.com/not-josue/rosyarc/assets/129870578/f9eab68f-7ff7-4dc3-ad6c-67557f7ae2cd)
+
+## Articles
+🚀 [Live Page](https://rosyarc.com/articles/diy-cross-arrangement/)
+
+![rosyarc-article](https://github.com/not-josue/rosyarc/assets/129870578/9c6f9372-3ac7-4729-8c83-bfcf5e0a9244)
