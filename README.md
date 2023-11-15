@@ -5,7 +5,7 @@
 
 Flower themed website for an Ebay seller that specializes in flower arrangements. Made with Bulma CSS customized in SASS, JavaScript, and Vite as a bundler.
 
-Brand images have been omitted.
+Brand images have been omitted.  
 Articles have been omitted.
 
 ## Languages/Frameworks
