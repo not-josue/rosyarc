@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "postcss": "postcss -u autoprefixer ./style.css -o ./style2.css --no-map",
     "sass": "sass --no-source-map ./sass/mystyles.scss:style.css"
   },
   "devDependencies": {
