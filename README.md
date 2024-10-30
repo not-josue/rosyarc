@@ -2,6 +2,9 @@
 
 Flower themed website for an Ebay seller that specializes in flower arrangements. Made with Tailwind and Astro.
 
+- Images have been omitted
+- Articles have been omitted
+
 ## Tools
 
 - [Cloudinary](https://cloudinary.com/) for image management
