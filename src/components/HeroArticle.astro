@@ -1,0 +1,36 @@
+---
+import ArticleImage from "./ArticleImage.astro";
+
+interface Props {
+  pageTitle: string;
+  description: string;
+  src: string;
+  alt: string;
+  height: number;
+  width: number;
+}
+
+const { pageTitle, description, src, alt, height, width } =
+  Astro.props as Props;
+---
+
+<!-- Padding Top is to adjust for the fixed navbar height -->
+<section class="not-prose mb-8 pt-[108px] grid place-items-center gap-4">
+  <h1
+    class="text-2xl mt-10 md:text-3xl lg:text-4xl font-extrabold capitalize text-balance dark:text-white"
+  >
+    {pageTitle}
+  </h1>
+
+  <ArticleImage src={src} alt={alt} height={height} width={width} />
+
+  <p class="text-pretty">
+    {description}
+  </p>
+</section>
+
+<style>
+  /* section {
+    margin-block-end: 32px;
+  } */
+</style>

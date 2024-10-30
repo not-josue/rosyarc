@@ -1,0 +1,33 @@
+---
+// Astro imports
+import { Image } from "astro:assets";
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  company: string;
+  companyLink: string;
+}
+
+const { src, alt, width, company, companyLink } = Astro.props as Props;
+---
+
+<!-- Issue with .mdx adding <p></p> inside <a></a> so have to hard code -->
+<figure
+  class=`max-w-[${String(width)}] rounded-xl shadow-xl dark:shadow-neutral-800`
+>
+  <Image class="rounded-t-xl" src={src} alt={alt} inferSize={true} , />
+  <figcaption
+    class="not-prose p-4 italic text-center bg-gray-100 dark:bg-neutral-700"
+  >
+    Image by {company}
+    <a
+      href={companyLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-block underline underline-offset-4 focus-within:bg-green-200 hover:bg-green-200 dark:focus-within:bg-neutral-800 dark:hover:bg-neutral-800"
+      >purchase on Amazon</a
+    >
+  </figcaption>
+</figure>

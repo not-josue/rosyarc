@@ -1,0 +1,761 @@
+---
+// Component imports
+import Hamburger from "./Hamburger.astro";
+import Logo from "./Logo.astro";
+import NavigationLink from "./NavigationLink.astro";
+import NavigationMessage from "./NavigationMessage.astro";
+import NavigationSocialLink from "./NavigationSocialLink.astro";
+
+const pages = [
+  { href: "/", text: "Home" },
+  { href: "/gallery", text: "Gallery" },
+  { href: "/about", text: "About" },
+];
+
+const ebay = {
+  href: "https://www.ebay.com/usr/rosyarc",
+  iconColor: "text-green-600",
+  dmIconColor: "dark:text-green-400",
+  srText: "Visit eBay Store",
+};
+
+const pinterest = {
+  href: "https://www.pinterest.com/ihavearosyarc/",
+  iconColor: "text-red-600",
+  dmIconColor: "dark:text-red-500",
+  srText: "Visit Pinterest Profile",
+};
+---
+
+<header class="relative">
+  <nav
+    class="z-20 fixed w-full bg-gradient-to-l from-green-300 via-green-400 to-green-300 font-bold dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950"
+  >
+    <!-- Spacing -->
+    <div class="mx-auto max-w-[90rem] px-4 py-6 text-xl md:px-8 lg:px-12">
+      <!-- Flex -->
+      <div class="flex items-center justify-between md:justify-around">
+        <!-- Mobile Button -->
+        <Hamburger />
+        <!-- Left -->
+        <div class="flex items-center gap-2">
+          <!-- Logo -->
+          <Logo />
+          <!-- Brand Name -->
+          <span class="text-2xl"> Rosy Arc </span>
+        </div>
+        <!-- Middle -->
+        <div class="primary-nav hidden gap-4 lg:flex">
+          <!-- Primary Navigation -->
+          {
+            pages.map((page) => (
+              <NavigationLink href={page.href} text={page.text} />
+            ))
+          }
+          <!-- Dropdown -->
+          <div class="group relative">
+            <button
+              aria-expanded="false"
+              aria-controls="articles-dropdown"
+              id="articles-dropdown-btn"
+              class="flex items-center gap-2 rounded-md p-2 group-focus-visible:bg-green-200 group-hover:bg-green-200 dark:group-focus-visible:bg-neutral-800 dark:group-hover:bg-neutral-800"
+            >
+              <span>Articles</span>
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="14"
+                width="8.75"
+                viewBox="0 0 320 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+                ></path>
+              </svg>
+            </button>
+            <!-- Dropdown Links -->
+            <div
+              id="articles-dropdown"
+              class="absolute left-1/2 z-10 hidden -translate-x-1/2 gap-2 text-nowrap rounded-md bg-white px-4 py-3 text-base shadow-2xl *:flex *:gap-1 *:rounded-md focus-visible:*:bg-green-200 hover:*:bg-green-200 group-hover:grid dark:bg-neutral-900 dark:shadow-neutral-800 dark:focus-visible:*:bg-neutral-800 dark:hover:*:bg-neutral-800"
+            >
+              <a href="/articles/diy-cemetery-bouquet" class="p-2">
+                <span class="text-red-400 dark:text-red-500" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    ><path
+                      d="M12.455 2.30885L11.9998 2.07617L11.5447 2.30885C10.3952 2.89646 9.35317 3.6638 8.45557 4.57394C9.77392 5.26024 10.9693 6.15018 12.0001 7.20207C13.0308 6.15028 14.2261 5.26041 15.5443 4.57414C14.6466 3.66391 13.6045 2.8965 12.455 2.30885ZM10.6993 8.73433C8.98925 6.93503 6.72625 5.66541 4.18066 5.19783L3 4.98096V13.0002C3 16.8047 5.36065 20.0579 8.69711 21.3748C8.24472 19.9984 8 18.5278 8 17C8 13.9083 9.00215 11.0507 10.6993 8.73433ZM21 4.98096L19.8193 5.19783C14.233 6.22396 10 11.1168 10 17.0002C10 18.5362 10.2891 20.0071 10.8167 21.3598L11.0569 21.9754C11.3711 21.9852 11.6856 22.0002 12 22.0002C16.9706 22.0002 21 17.9708 21 13.0002V4.98096Z"
+                    ></path></svg
+                  >
+                </span>
+                <span>DIY Cemetery Bouquet</span>
+              </a>
+              <a href="/articles/diy-cross-arrangement" class="p-2">
+                <span class="text-red-400 dark:text-red-500" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    ><path d="M14 2H10V8H4V12H10V22H14V12H20V8H14V2Z"
+                    ></path></svg
+                  >
+                </span>
+                <span>DIY Cross Arrangement</span>
+              </a>
+              <a href="/articles/diy-heart-arrangement" class="p-2">
+                <span class="text-red-400 dark:text-red-500" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    ><path
+                      d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"
+                    ></path></svg
+                  >
+                </span>
+                <span>DIY Heart Arrangement</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div
+          class="flex gap-3 *:bg-green-100 hover:*:bg-green-50 focus-visible:*:bg-green-50 *:rounded-full dark:*:bg-neutral-800 dark:hover:*:bg-neutral-700 dark:focus-visible:*:bg-neutral-700"
+        >
+          <!-- Theme Settings -->
+          <div class="relative text-base flex justify-end">
+            <!-- justify-end keeps the div from going out of the viewport -->
+            <!-- Theme Button -->
+            <button
+              id="theme-btn"
+              aria-expanded="false"
+              aria-controls="theme-options"
+              class="p-2 rounded-full"
+            >
+              <!-- Light -->
+              <span aria-hidden="true" class="text-yellow-400 dark:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="24"
+                  width="24"
+                  viewBox="0 0 512 512"
+                >
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+                  ></path>
+                </svg>
+              </span>
+              <!-- Dark -->
+              <span aria-hidden="true" class="hidden text-sky-200 dark:block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  height="24"
+                  width="21"
+                  viewBox="0 0 384 512"
+                >
+                  <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sr-only">Theme Settings</span>
+            </button>
+            <!-- Dropdown -->
+            <div
+              id="theme-options"
+              class="absolute hover:*:bg-green-200 dark:hover:*:bg-neutral-800 *:flex *:gap-2 *:rounded-md *:items-center top-12 md:left-1/2 z-10 grid text-neutral-900 hidden md:-translate-x-1/2 gap-1 text-nowrap rounded-md bg-white px-3 py-2 shadow-2xl dark:bg-neutral-900 dark:shadow-neutral-800 dark:text-neutral-50"
+            >
+              <!-- Light -->
+              <button
+                class="p-2 border-yellow-400"
+                data-theme="light"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true" class="text-yellow-400">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    height="18"
+                    width="18"
+                    viewBox="0 0 512 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>Light Theme</span>
+              </button>
+              <!-- Dark -->
+              <button
+                class="p-2 border-sky-500 dark:border-sky-200"
+                data-theme="dark"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true" class="text-sky-500 dark:text-sky-200">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    height="18"
+                    width="18"
+                    viewBox="0 0 384 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+                    ></path>
+                  </svg>
+                </span>
+                <span>Dark Theme</span>
+              </button>
+              <!-- OS -->
+              <button
+                class="p-2 border-neutral-500 dark:border-neutral-300"
+                data-theme="os"
+                aria-pressed="false"
+              >
+                <span
+                  aria-hidden="true"
+                  class="text-neutral-500 dark:text-neutral-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    height="18"
+                    width="18"
+                    viewBox="0 0 640 512"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M384 96l0 224L64 320 64 96l320 0zM64 32C28.7 32 0 60.7 0 96L0 320c0 35.3 28.7 64 64 64l117.3 0-10.7 32L96 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-74.7 0-10.7-32L384 384c35.3 0 64-28.7 64-64l0-224c0-35.3-28.7-64-64-64L64 32zm464 0c-26.5 0-48 21.5-48 48l0 352c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-352c0-26.5-21.5-48-48-48l-64 0zm16 64l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"
+                    ></path>
+                  </svg>
+                </span>
+                <span aria-label="Operating System Theme">OS Theme</span>
+              </button>
+            </div>
+          </div>
+          <!-- Copy Link -->
+          <div class="relative content-center hidden md:block">
+            <button
+              id="copy-btn"
+              class="p-2 rounded-full text-sky-600 dark:text-sky-400"
+            >
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="20"
+                width="25"
+                viewBox="0 0 640 512"
+              >
+                <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
+                ></path>
+              </svg>
+              <span class="sr-only">Copy URL</span>
+            </button>
+            <NavigationMessage id="copy-msg" />
+          </div>
+          <!-- Secondary Navigation -->
+          <!-- eBay -->
+          <NavigationSocialLink
+            href={ebay.href}
+            iconColor={ebay.iconColor}
+            dmIconColor={ebay.dmIconColor}
+            srText={ebay.srText}
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              width="21"
+              viewBox="0 0 448 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+              ></path>
+            </svg>
+          </NavigationSocialLink>
+          <!-- Pinterest -->
+          <NavigationSocialLink
+            href={pinterest.href}
+            iconColor={pinterest.iconColor}
+            dmIconColor={pinterest.dmIconColor}
+            srText={pinterest.srText}
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="24"
+              width="23.25"
+              viewBox="0 0 496 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3 .8-3.4 5-20.3 6.9-28.1 .6-2.5 .3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"
+              ></path>
+            </svg>
+          </NavigationSocialLink>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div
+      id="mobile-menu"
+      class="absolute hidden grid z-10 lg:hidden landscape:sm:text-sm text-lg p-2 md:p-4 font-bold bg-white dark:border-t-4 dark:border-neutral-50 shadow-2xl dark:bg-neutral-950 dark:shadow-neutral-800"
+    >
+      <!-- Primary Navigation -->
+      {
+        pages.map((page) => (
+          <NavigationLink href={page.href} text={page.text} />
+        ))
+      }
+      <!-- Articles -->
+      <p class="landscape:sm:p-1 p-2 flex gap-1 items-center">
+        <span>Articles</span>
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          height="14"
+          width="8.75"
+          viewBox="0 0 320 512"
+        >
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+          ></path>
+        </svg>
+      </p>
+      <div
+        class="grid *:flex *:gap-1 *:rounded-md landscape:sm:*:p-1 *:p-2 *:font-semibold focus-visible:*:bg-green-200 hover:*:bg-green-200 dark:hover:*:bg-neutral-800 dark:focus-visible:*:bg-neutral-800"
+      >
+        <a href="/articles/diy-cemetery-bouquet" class="items-center">
+          <span
+            class="text-red-400 dark:text-red-500 size-5 md:size-6"
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              ><path
+                d="M12.455 2.30885L11.9998 2.07617L11.5447 2.30885C10.3952 2.89646 9.35317 3.6638 8.45557 4.57394C9.77392 5.26024 10.9693 6.15018 12.0001 7.20207C13.0308 6.15028 14.2261 5.26041 15.5443 4.57414C14.6466 3.66391 13.6045 2.8965 12.455 2.30885ZM10.6993 8.73433C8.98925 6.93503 6.72625 5.66541 4.18066 5.19783L3 4.98096V13.0002C3 16.8047 5.36065 20.0579 8.69711 21.3748C8.24472 19.9984 8 18.5278 8 17C8 13.9083 9.00215 11.0507 10.6993 8.73433ZM21 4.98096L19.8193 5.19783C14.233 6.22396 10 11.1168 10 17.0002C10 18.5362 10.2891 20.0071 10.8167 21.3598L11.0569 21.9754C11.3711 21.9852 11.6856 22.0002 12 22.0002C16.9706 22.0002 21 17.9708 21 13.0002V4.98096Z"
+              ></path></svg
+            >
+          </span>
+          <span><span class="sr-only">Article </span>DIY Cemetery Bouquet</span>
+        </a>
+        <a href="/articles/diy-cross-arrangement" class="items-center">
+          <span
+            class="text-red-400 dark:text-red-500 size-5 md:size-6"
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              ><path d="M14 2H10V8H4V12H10V22H14V12H20V8H14V2Z"></path></svg
+            >
+          </span>
+          <span><span class="sr-only">Article </span>DIY Cross Arrangement</span
+          >
+        </a>
+        <a href="/articles/diy-heart-arrangement" class="items-center">
+          <span
+            class="text-red-400 dark:text-red-500 size-5 md:size-6"
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              ><path
+                d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"
+              ></path></svg
+            >
+          </span>
+          <span><span class="sr-only">Article </span>DIY Heart Arrangement</span
+          >
+        </a>
+      </div>
+      <!-- Secondary Navigation -->
+      <div class="flex md:hidden justify-evenly landscape:sm:p-1 p-2 gap-3">
+        <!-- Copy Link -->
+        <div class="relative content-center md:block">
+          <button
+            id="small-copy-btn"
+            class="landscape:sm:p-1 p-2 rounded-full text-sky-600 dark:text-sky-400 bg-neutral-100 hover:bg-neutral-300 focus-visible:bg-green-50 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus-visible:bg-neutral-700"
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              height="20"
+              width="25"
+              viewBox="0 0 640 512"
+            >
+              <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"
+              ></path>
+            </svg>
+            <span class="sr-only">Copy URL</span>
+          </button>
+          <NavigationMessage
+            id="small-copy-msg"
+            addedClass="sm:landscape:left-60 sm:landscape:-top-8 left-14 ring-2 ring-sky-600 dark:ring-sky-400"
+          />
+        </div>
+        <!-- eBay -->
+        <NavigationSocialLink
+          href={ebay.href}
+          iconColor={ebay.iconColor}
+          dmIconColor={ebay.dmIconColor}
+          srText={ebay.srText}
+          isHidden={false}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            height="22"
+            width="21"
+            viewBox="0 0 448 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+            ></path>
+          </svg>
+        </NavigationSocialLink>
+        <!-- Pinterest -->
+        <NavigationSocialLink
+          href={pinterest.href}
+          iconColor={pinterest.iconColor}
+          dmIconColor={pinterest.dmIconColor}
+          srText={pinterest.srText}
+          isHidden={false}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            height="24"
+            width="23.25"
+            viewBox="0 0 496 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3 .8-3.4 5-20.3 6.9-28.1 .6-2.5 .3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"
+            ></path>
+          </svg>
+        </NavigationSocialLink>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Page Overlay -->
+<div
+  aria-hidden="true"
+  id="page-overlay"
+  class="fixed inset-0 hidden w-full z-10 bg-neutral-500 opacity-40 dark:bg-neutral-900"
+>
+</div>
+
+<script>
+  const trapFocus = (button: HTMLButtonElement, array: HTMLElement[]) => {
+    let counter = 0;
+    const first = 0,
+      last = array.length - 1;
+
+    document.onkeydown = (e) => {
+      if (e.key === "Tab" && e.shiftKey) {
+        counter === first ? (counter = last) : --counter;
+        array[counter].focus();
+        e.preventDefault();
+      } else if (e.key === "Tab") {
+        counter === last ? (counter = first) : ++counter;
+        array[counter].focus();
+        e.preventDefault();
+      }
+      if (e.key === "Escape") {
+        button.click();
+      }
+    };
+  };
+
+  const articlesDropdown = () => {
+    const btnEl =
+      (document.getElementById("articles-dropdown-btn") as HTMLButtonElement) ||
+      null;
+    const divEl =
+      (document.getElementById("articles-dropdown") as HTMLDivElement) || null;
+
+    btnEl.onclick = () => {
+      const isExpanded = btnEl.getAttribute("aria-expanded") === "true";
+      btnEl.setAttribute("aria-expanded", String(!isExpanded));
+      divEl.classList.toggle("hidden");
+      divEl.classList.toggle("grid");
+
+      // Trap Focus
+      if (!isExpanded) {
+        const articleLinks =
+          (divEl.querySelectorAll("a") as NodeListOf<HTMLAnchorElement>) ||
+          null;
+        const focusedArea = [btnEl, ...articleLinks] as HTMLElement[];
+
+        trapFocus(btnEl, focusedArea);
+      } else document.onkeydown = null;
+    };
+  };
+
+  const themeSetter = () => {
+    // Constants used
+    const themeDivBtn =
+      (document.getElementById("theme-btn") as HTMLButtonElement) || null;
+    const themeDiv =
+      (document.getElementById("theme-options") as HTMLDivElement) || null;
+    const themeBtns =
+      (themeDiv.querySelectorAll("button") as NodeListOf<HTMLButtonElement>) ||
+      null;
+    // Set initial checked button el
+    checkInput();
+    // Toggle div
+    themeDivBtn.onclick = () => {
+      const isExpanded = themeDivBtn.getAttribute("aria-expanded") === "true";
+      themeDivBtn.setAttribute("aria-expanded", String(!isExpanded));
+      themeDiv.classList.toggle("hidden");
+
+      // Trap Focus
+      if (!isExpanded) {
+        const paramBtns =
+          (themeDiv.querySelectorAll(
+            "button"
+          ) as NodeListOf<HTMLButtonElement>) || null;
+
+        const focusArea = [themeDivBtn, ...paramBtns] as HTMLButtonElement[];
+
+        trapFocus(themeDivBtn, focusArea);
+
+        // Hide div when clicking outside of it
+        document.onclick = (e) => {
+          const target = (e.target as Node) || null;
+          const isTarget =
+            themeDiv.contains(target) || themeDivBtn.contains(target);
+
+          if (!isTarget) themeDivBtn.click();
+        };
+      } else {
+        document.onkeydown = null;
+        document.onclick = null;
+      }
+    };
+    // Button clicked to set theme
+    themeBtns.forEach((button) => {
+      button.onclick = (e) => {
+        resetInputs(); // Reset
+        const target = (e.currentTarget as HTMLElement) || null;
+        localStorage.theme = target.dataset.theme;
+        checkInput();
+        setTheme();
+      };
+    });
+    // Listen for OS change
+    window.matchMedia("(prefers-color-scheme: dark)").onchange = () => {
+      if (localStorage.theme !== "os") return;
+      else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+        setTheme("dark");
+      else setTheme("light");
+    };
+
+    // Function to style the current settings button
+    function checkInput() {
+      const storedTheme = localStorage.theme;
+      themeBtns.forEach((button) => {
+        if (storedTheme === button.dataset.theme) {
+          button.classList.add("border-2");
+          button.ariaPressed = "true";
+          return;
+        }
+      });
+    }
+    // Function to reset inputs
+    function resetInputs() {
+      themeBtns.forEach((button) => {
+        if (button.classList.contains("border-2")) {
+          button.classList.remove("border-2");
+          button.ariaPressed = "false";
+        }
+      });
+    }
+    // Function to add and remove dark theme
+    function setTheme(theme = localStorage.theme) {
+      switch (theme) {
+        case "light":
+          document.documentElement.classList.remove("dark");
+          break;
+        case "dark":
+          document.documentElement.classList.add("dark");
+          break;
+        default:
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+            document.documentElement.classList.add("dark");
+          else document.documentElement.classList.remove("dark");
+      }
+    }
+  };
+
+  const currentPage = () => {
+    const currentPage = window.location.pathname;
+    document.querySelectorAll("nav a").forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add(
+          "underline",
+          "underline-offset-4",
+          "md:underline-offset-8",
+          "decoration-inherit"
+        );
+        link.ariaCurrent = "page";
+      } else {
+        link.classList.remove(
+          "underline",
+          "underline-offset-4",
+          "md:underline-offset-8",
+          "decoration-inherit"
+        );
+        link.ariaCurrent = "false";
+      }
+    });
+  };
+
+  const mobileMenu = () => {
+    const mobileMenuBtn =
+      (document.getElementById("menu-toggle") as HTMLButtonElement) || null;
+    const mobileMenuDiv =
+      (document.getElementById("mobile-menu") as HTMLDivElement) || null;
+    // Hamburger
+    const menuTopSpan =
+      (document.getElementById("menu-top") as HTMLSpanElement) || null;
+    const menuMiddleSpan =
+      (document.getElementById("menu-middle") as HTMLSpanElement) || null;
+    const menuBottomSpan =
+      (document.getElementById("menu-bottom") as HTMLSpanElement) || null;
+    // Page Overlay
+    const pageOverlay =
+      (document.getElementById("page-overlay") as HTMLDivElement) || null;
+
+    mobileMenuBtn.onclick = () => {
+      const isExpanded = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+      mobileMenuBtn.setAttribute("aria-expanded", String(!isExpanded));
+      mobileMenuDiv.classList.toggle("hidden");
+      // Hamburger Top
+      menuTopSpan.classList.toggle("translate-y-2");
+      menuTopSpan.classList.toggle("rotate-45");
+      // Hamburger Middle
+      menuMiddleSpan.classList.toggle("scale-0");
+      // Hamburger Bottom
+      menuBottomSpan.classList.toggle("-translate-y-2");
+      menuBottomSpan.classList.toggle("-rotate-45");
+      // Page Overlay
+      pageOverlay.classList.toggle("hidden");
+      // Trap Focus
+      if (!isExpanded) {
+        const navParamLinks =
+          (Array.from(mobileMenuDiv.querySelectorAll("a")) as HTMLElement[]) ||
+          null;
+        const copyButtonEl =
+          (document.getElementById("small-copy-btn") as HTMLButtonElement) ||
+          null;
+        // Append button to fix tab order
+        navParamLinks.splice(-2, 0, copyButtonEl);
+        const focusArea = [mobileMenuBtn, ...navParamLinks] as HTMLElement[];
+        trapFocus(mobileMenuBtn, focusArea);
+
+        // Hide div when clicking outside of it
+        window.onclick = (e) => {
+          const target = (e.target as Node) || null;
+          const themeDivBtn =
+            (document.getElementById("theme-btn") as HTMLButtonElement) || null;
+
+          const isTarget =
+            mobileMenuDiv.contains(target) || mobileMenuBtn.contains(target);
+
+          if (target === themeDivBtn) {
+            mobileMenuBtn.click();
+            themeDivBtn.click();
+          } else if (!isTarget) mobileMenuBtn.click();
+        };
+      } else {
+        document.onkeydown = null;
+        window.onclick = null;
+      }
+    };
+
+    const largeScreenSize = 1024;
+    // Closes menu when screen size is large
+    window.onresize = () => {
+      const windowWidth = window.innerWidth;
+      const isHidden = mobileMenuDiv.classList.contains("hidden");
+      if (windowWidth >= largeScreenSize && !isHidden) mobileMenuBtn.click();
+    };
+  };
+
+  const showCopyMsg = () => {
+    const copyBtn =
+      (document.getElementById("copy-btn") as HTMLButtonElement) || null;
+    // Large Nav
+    copyBtn.onclick = async () => {
+      copyLink("copy-msg");
+    };
+
+    // Small Nav
+    const smallCopyBtn =
+      (document.getElementById("small-copy-btn") as HTMLButtonElement) || null;
+    smallCopyBtn.onclick = async () => {
+      copyLink("small-copy-msg");
+    };
+
+    async function copyLink(msgDivId: string) {
+      const currentPage = window.location.href; // Get full URL
+      try {
+        await navigator.clipboard.writeText(currentPage);
+        const msgDiv =
+          (document.getElementById(msgDivId) as HTMLDivElement) || null;
+        msgDiv.classList.remove("hidden"); // Show the message
+
+        setTimeout(() => {
+          msgDiv.classList.add("hidden"); // Hide the message after 1 second
+        }, 1000);
+      } catch (err) {
+        console.error("Failed to copy URL: ", err);
+      }
+    }
+  };
+
+  document.addEventListener("astro:page-load", () => {
+    articlesDropdown();
+    themeSetter();
+    currentPage();
+    mobileMenu();
+    showCopyMsg();
+  });
+</script>

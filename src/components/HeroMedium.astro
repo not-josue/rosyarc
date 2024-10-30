@@ -1,0 +1,17 @@
+---
+interface Props {
+  pageTitle: string;
+}
+
+const { pageTitle } = Astro.props as Props;
+---
+
+<!-- Padding Top is to adjust for the fixed navbar height -->
+<section
+  aria-roledescription="banner"
+  class="h-[calc(50vh+108px)] flex justify-center items-center pt-[108px] dark:bg-neutral-950"
+>
+  <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold capitalize">
+    {pageTitle}
+  </h1>
+</section>

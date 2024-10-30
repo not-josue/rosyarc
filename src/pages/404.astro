@@ -1,0 +1,32 @@
+---
+// Component imports
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Cloudinary imports
+import { CldImage } from "astro-cloudinary";
+
+// Data imports
+import { openGraph } from "../data";
+import { ERROR_IMG } from "../data/constants";
+---
+
+<MainLayout
+  title={openGraph.title}
+  description={openGraph.description}
+  openGraph={openGraph}
+>
+  <section
+    class="h-screen text-center flex justify-center items-center pt-[108px] px-8 md:px-0 bg-gray-100 dark:bg-neutral-900"
+  >
+    <CldImage
+      src={ERROR_IMG}
+      width={600}
+      height={566}
+      alt=""
+      crop={{
+        type: "auto",
+        source: true,
+      }}
+    />
+  </section>
+</MainLayout>

@@ -1,0 +1,18 @@
+---
+interface Props {
+  src: string;
+}
+
+const { src } = Astro.props as Props;
+---
+
+<!-- title attribute is the most accessible way to label an iframe, no other use cases -->
+<iframe
+  style="margin-block: 24px;"
+  class="shadow-xl rounded-xl dark:shadow-neutral-800"
+  loading="lazy"
+  referrerpolicy="no-referrer"
+  width="315"
+  height="560"
+  src={src}
+  title="YouTube shorts video player"></iframe>

@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  addedClass?: string;
+}
+
+const { id, addedClass = "" } = Astro.props as Props;
+---
+
+<div
+  id={id}
+  class:list={{
+    "absolute left-1/2 min-w-max mt-2 italic rounded-lg hidden -translate-x-1/2 text-base z-10 bg-white p-4 shadow-2xl dark:bg-neutral-900 dark:shadow-neutral-800": true,
+    [addedClass]: !!addedClass,
+  }}
+  role="alert"
+>
+  Link Copied!
+</div>

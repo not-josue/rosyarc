@@ -1,0 +1,29 @@
+---
+interface LinkData {
+  href: string;
+  aria: string;
+  text: string;
+}
+
+interface Props {
+  data: Array<LinkData>;
+}
+
+const { data } = Astro.props as Props;
+---
+
+<div class="flex flex-wrap justify-center text-center">
+  {
+    data.map((el) => (
+      <a
+        href={el.href}
+        target="_blank"
+        aria-label={el.aria}
+        rel="noopener noreferrer"
+        class="p-2 rounded underline underline-offset-4 focus-within:bg-green-200 hover:bg-green-200 dark:focus-within:bg-neutral-800 dark:hover:bg-neutral-800"
+      >
+        {el.text}
+      </a>
+    ))
+  }
+</div>

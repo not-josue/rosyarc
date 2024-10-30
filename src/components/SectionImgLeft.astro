@@ -1,0 +1,54 @@
+---
+// Component imports
+import Section from "./Section.astro";
+
+// Astro Assets imports
+import { Image } from "astro:assets";
+
+// Data imports
+import { IMAGE_HEIGHT, IMAGE_WIDTH } from "../data/constants";
+
+interface Props {
+  bgLight?: string;
+  bgDark?: string;
+  sectionTitle: string;
+  sectionImgUrl: string;
+  sectionImgAlt?: string;
+  sectionSubTitle: string;
+  sectionPara: string;
+}
+
+const {
+  sectionTitle,
+  bgDark,
+  bgLight,
+  sectionImgAlt = "",
+  sectionImgUrl,
+  sectionSubTitle,
+  sectionPara,
+} = Astro.props as Props;
+---
+
+<Section sectionTitle={sectionTitle} bgDark={bgDark} bgLight={bgLight}>
+  <!-- Grid -->
+  <div
+    class="text-center grid grid-cols-1 place-items-center gap-4 lg:text-left lg:grid-cols-2"
+  >
+    <Image
+      class="rounded-sm"
+      src={sectionImgUrl}
+      alt={sectionImgAlt}
+      height={IMAGE_HEIGHT}
+      width={IMAGE_WIDTH}
+      format="avif"
+    />
+    <article class="grid gap-4 max-w-prose-2-cols">
+      <h3 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-balance">
+        {sectionSubTitle}
+      </h3>
+      <p class=`text-pretty md:text-lg`>
+        {sectionPara}
+      </p>
+    </article>
+  </div>
+</Section>

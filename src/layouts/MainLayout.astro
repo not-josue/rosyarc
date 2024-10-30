@@ -1,0 +1,104 @@
+---
+// Component imports
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+// Font imports
+import "@fontsource/gelasio/400.css";
+import "@fontsource/gelasio/500.css";
+import "@fontsource/gelasio/600.css";
+import "@fontsource/gelasio/700.css";
+import "@fontsource/gelasio/400-italic.css";
+import "@fontsource/gelasio/500-italic.css";
+import "@fontsource/gelasio/600-italic.css";
+import "@fontsource/gelasio/700-italic.css";
+
+// Astro Assets imports
+import { ViewTransitions } from "astro:transitions";
+
+interface OpenGraph {
+  url: string;
+  title: string;
+  description: string;
+  image: {
+    base: string;
+    twitter: string;
+    pinterest: string;
+  };
+  alt: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  openGraph: OpenGraph;
+}
+
+const { title, description, openGraph } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <!-- Open Graph -->
+    <meta property="og:url" content={openGraph.url} />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:title" content={openGraph.title} />
+    <meta property="og:description" content={openGraph.description} />
+    <meta property="og:image" content={openGraph.image.base} />
+    <meta property="pinterest:image" content={openGraph.image.pinterest} />
+    <meta property="alt" content={openGraph.alt} />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={openGraph.title} />
+    <meta name="twitter:description" content={openGraph.description} />
+    <meta name="twitter:image" content={openGraph.image.twitter} />
+    <meta name="twitter:image:alt" content={openGraph.alt} />
+    <!-- Styles -->
+    <ViewTransitions />
+    <style is:global>
+      body {
+        font-family: "Gelasio", serif;
+      }
+    </style>
+    <!-- Dark Mode -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      document.addEventListener("astro:page-load", () => {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+          (localStorage.theme === "os" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+        if (!("theme" in localStorage)) localStorage.theme = "os";
+      });
+    </script>
+  </head>
+
+  <body
+    class="text-neutral-950 dark:text-neutral-50 transition-colors duration-500"
+  >
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

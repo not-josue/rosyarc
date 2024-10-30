@@ -1,0 +1,96 @@
+---
+// Component imports
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import ShareButtons from "../components/ShareButtons.astro";
+
+// Font imports
+import "@fontsource/gelasio/400.css";
+import "@fontsource/gelasio/500.css";
+import "@fontsource/gelasio/600.css";
+import "@fontsource/gelasio/700.css";
+import "@fontsource/gelasio/400-italic.css";
+import "@fontsource/gelasio/500-italic.css";
+import "@fontsource/gelasio/600-italic.css";
+import "@fontsource/gelasio/700-italic.css";
+
+// Astro Assets imports
+import { ViewTransitions } from "astro:transitions";
+
+// Data imports
+import { MAIN_TITLE } from "../data/constants";
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={frontmatter.description} />
+    <title>{MAIN_TITLE + frontmatter.title}</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png" />
+    <link rel="icon" sizes="16x16" href="/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <!-- Open Graph -->
+    <meta property="og:url" content={frontmatter.url} />
+    <meta property="og:type" content="webpage" />
+    <meta property="og:title" content={frontmatter.title} />
+    <meta property="og:description" content={frontmatter.description} />
+    <meta property="og:image" content={frontmatter.image.base} />
+    <meta property="pinterest:image" content={frontmatter.image.pinterest} />
+    <meta property="alt" content={frontmatter.alt} />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={frontmatter.title} />
+    <meta name="twitter:description" content={frontmatter.description} />
+    <meta name="twitter:image" content={frontmatter.image.twitter} />
+    <meta name="twitter:image:alt" content={frontmatter.alt} />
+
+    <!-- Styles -->
+    <ViewTransitions />
+    <style is:global>
+      body {
+        font-family: "Gelasio", serif;
+      }
+    </style>
+    <!-- Dark Mode -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      document.addEventListener("astro:page-load", () => {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches) ||
+          (localStorage.theme === "os" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+        if (!("theme" in localStorage)) localStorage.theme = "os";
+      });
+    </script>
+  </head>
+  <body class="text-neutral-950 dark:text-neutral-50 dark:bg-neutral-900">
+    <Navigation />
+    <!-- Border at bottom needed for light mode, acts as a separator between main and footer -->
+    <main
+      class="grid place-items-center prose prose-sm px-8 mx-auto border-b md:px-12 lg:px-16 md:prose-base lg:prose-lg dark:prose-invert dark:border-b-0"
+    >
+      <slot />
+      <ShareButtons
+        url={frontmatter.url}
+        image={frontmatter.image}
+        description={frontmatter.description}
+      />
+    </main>
+    <Footer />
+  </body>
+</html>

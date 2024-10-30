@@ -1,0 +1,34 @@
+---
+interface Props {
+  href: string;
+  iconColor: string;
+  dmIconColor: string;
+  srText: string;
+  isHidden?: boolean;
+}
+
+const {
+  href,
+  iconColor,
+  dmIconColor,
+  srText,
+  isHidden = true,
+} = Astro.props as Props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener"
+  class:list={{
+    "rounded-full bg-neutral-100 p-2 hover:bg-neutral-300 focus-visible:bg-green-50 md:block sm:landscape:p-1 md:landscape:p-2 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:focus-visible:bg-neutral-700": true,
+    [iconColor]: !!iconColor,
+    [dmIconColor]: !!dmIconColor,
+    hidden: isHidden,
+  }}
+>
+  <span aria-hidden="true">
+    <slot />
+  </span>
+  <span class="sr-only">{srText}</span>
+</a>

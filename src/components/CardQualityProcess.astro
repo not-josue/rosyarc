@@ -1,0 +1,19 @@
+---
+interface Props {
+  subtitle: string;
+  paragraph: string;
+}
+
+const { subtitle, paragraph } = Astro.props as Props;
+---
+
+<article
+  class="relative bg-white grid gap-y-4 rounded-lg p-8 shadow-lg md:p-8 dark:shadow-neutral-700 dark:bg-neutral-900"
+>
+  <!-- SVG -->
+  <slot />
+  <h3 class="text-lg font-semibold">{subtitle}</h3>
+  <p class="text-pretty md:text-lg">
+    {paragraph}
+  </p>
+</article>

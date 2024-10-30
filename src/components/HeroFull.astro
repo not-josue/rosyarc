@@ -1,0 +1,22 @@
+---
+// Data imports
+import { imageUrls } from "../data/index.ts";
+---
+
+<section
+  id="hero"
+  class=`h-screen text-center relative flex justify-center items-center pt-[108px] bg-cover bg-center bg-no-repeat`
+  style=`background-image: url(${imageUrls[0]});`
+>
+  <!-- Hero Overlay -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-gradient-to-r overflow-hidden from-gray-600 to-gray-600 dark:from-neutral-800 dark:to-neutral-900 opacity-70"
+  >
+  </div>
+  <h1
+    class="relative text-3xl md:text-4xl lg:text-5xl font-extrabold text-neutral-50 capitalize text-balance"
+  >
+    a memorable passage of time
+  </h1>
+</section>

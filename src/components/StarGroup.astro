@@ -1,0 +1,9 @@
+---
+// Component imports
+import Star from "./Star.astro";
+---
+
+<div class="flex items-center gap-x-2">
+  {[1, 2, 3, 4, 5].map((_el) => <Star />)}
+  <span class="sr-only">Review Rating: 5 Stars</span>
+</div>

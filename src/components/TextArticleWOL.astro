@@ -1,0 +1,20 @@
+---
+interface Props {
+  subsectionTitle: string;
+  subsectionParagraph: string;
+}
+
+const { subsectionTitle, subsectionParagraph } = Astro.props;
+---
+
+<!-- Text Article Without Link -->
+<article class="grid gap-4">
+  <h3 class="flex items-center gap-4 text-2xl font-semibold">
+    <!-- SVG -->
+    <slot />
+    {subsectionTitle}
+  </h3>
+  <p class="text-pretty max-w-prose-2-cols md:text-lg">
+    {subsectionParagraph}
+  </p>
+</article>

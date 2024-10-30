@@ -1,0 +1,27 @@
+---
+// Cloudinary Imports
+import { CldImage } from "astro-cloudinary";
+
+interface Props {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+const { src, alt, width, height } = Astro.props as Props;
+---
+
+<CldImage
+  class="rounded-xl shadow-xl dark:shadow-neutral-800"
+  src={src}
+  alt={alt}
+  width={width}
+  height={height}
+/>
+
+<style>
+  img {
+    margin-block: 24px;
+  }
+</style>

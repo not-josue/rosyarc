@@ -1,0 +1,55 @@
+---
+interface Props {
+  articleTitle: string;
+  articlePara: string;
+  svgFillLight?: string;
+  svgFillDark?: string;
+  svgBgLight?: string;
+  svgBgDark?: string;
+}
+
+const {
+  articleTitle,
+  articlePara,
+  svgBgLight = "bg-neutral-200",
+  svgBgDark = "dark:bg-neutral-900",
+  svgFillLight = "",
+  svgFillDark = "",
+} = Astro.props as Props;
+---
+
+<!-- Article -->
+<article
+  class:list={{
+    "grid gap-4 text-center max-w-prose lg:text-left": true,
+  }}
+>
+  <!-- SVG -->
+  <span
+    class:list={{
+      "rounded-full p-4 place-self-center lg:place-self-start max-w-min": true,
+      [svgBgLight]: !!svgBgLight,
+      [svgBgDark]: !!svgBgDark,
+      [svgFillLight]: !!svgFillLight,
+      [svgFillDark]: !!svgFillDark,
+    }}
+    aria-hidden="true"
+  >
+    <!-- Paste SVG -->
+    <slot />
+  </span>
+  <h3
+    class:list={{
+      "font-semibold text-2xl": true,
+    }}
+  >
+    {articleTitle}
+  </h3>
+  <p
+    class:list={{
+      "text-pretty md:text-lg": true,
+    }}
+  >
+    {articlePara}
+  </p>
+</article>

@@ -1,0 +1,418 @@
+---
+// Component imports
+import MainLayout from "../layouts/MainLayout.astro";
+import HeroFull from "../components/HeroFull.astro";
+import Section from "../components/Section.astro";
+import SectionImgLeft from "../components/SectionImgLeft.astro";
+import CardProducts from "../components/CardProducts.astro";
+import CardQualityProcess from "../components/CardQualityProcess.astro";
+import ReviewGrid from "../components/ReviewGrid.astro";
+import GridTwoColsText from "../components/GridTwoColsText.astro";
+import ProductDetails from "../components/ProductDetails";
+
+// Data imports
+import { ARTICLE_GAP } from "../data/constants";
+import {
+  openGraph,
+  imageUrls,
+  design,
+  products,
+  qualityProcess,
+} from "../data/index";
+---
+
+<MainLayout
+  title={openGraph.title}
+  description={openGraph.description}
+  openGraph={openGraph}
+>
+  <!-- Hero Section -->
+  <HeroFull />
+
+  <!-- Design Section -->
+  <SectionImgLeft
+    sectionTitle={design.title}
+    sectionImgUrl={imageUrls[1]}
+    sectionPara={design.paragraph}
+    sectionSubTitle={design.subtitle}
+  />
+
+  <!-- Products Section -->
+  <Section
+    sectionTitle="Products"
+    bgLight="bg-gray-100"
+    bgDark="dark:bg-zinc-950"
+  >
+    <!-- Grid -->
+    <div
+      class=`grid gap-${ARTICLE_GAP} md:gap-8 grid-cols-1 place-items-center lg:grid-cols-3`
+    >
+      <!-- Bouquets -->
+      <CardProducts
+        articlePara={products[0].paragraph}
+        articleTitle={products[0].productTitle}
+        svgFillLight="text-green-600"
+      >
+        <svg
+          class="size-12 md:size-14 lg:size-16"
+          fill="currentColor"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <>
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g>
+                  <path
+                    d="M476.689,230.71l35.309-52.964h-80.068c-23.016,0-42.64,14.761-49.928,35.309h-58.092l40.94-40.94 c19.684,9.377,43.997,5.938,60.271-10.336l56.616-56.616l-62.418-12.484L406.837,30.26L350.22,86.877 c-16.274,16.274-19.713,40.588-10.336,60.271l-40.94,40.94v-58.092c20.549-7.288,35.309-26.912,35.309-49.928V0l-52.964,35.309 L228.326,0v80.068c0,14.603,5.94,27.844,15.531,37.435c5.526,5.526,12.268,9.829,19.779,12.494v28.423l89.945,89.945h28.423 c2.665,7.512,6.968,14.253,12.494,19.779c9.591,9.591,22.832,15.531,37.434,15.53H512L476.689,230.71z"
+                  ></path>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon
+                    points="304.448,247.502 304.448,248.364 305.31,248.364 "
+                  ></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon
+                    points="263.636,206.69 263.636,207.552 264.5,207.552 "
+                  ></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon
+                    points="191.405,134.46 92.493,304.024 207.976,419.507 377.54,320.595 "
+                  ></polygon>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <polygon
+                    points="67.362,327.163 0,360.844 151.156,512 184.837,444.638 "
+                  ></polygon>
+                </g>
+              </g>
+            </g>
+          </>
+        </svg>
+      </CardProducts>
+      <!-- Saddles -->
+      <CardProducts
+        articlePara={products[1].paragraph}
+        articleTitle={products[1].productTitle}
+        svgFillLight="text-amber-600"
+      >
+        <svg
+          fill="currentColor"
+          class="size-12 md:size-14 lg:size-16"
+          viewBox="0 0 9.525 11.112"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            style="stroke:none;stroke-width:.204271"
+            d="M86.82 95.4c-.575-.256-.683-.818-.321-1.669.118-.279.215-.565.215-.635 0-.19.105-.456.193-.49.17-.066.097.62-.112 1.058-.378.793-.087 1.25.788 1.234.707-.012.839-.207.693-1.023-.113-.63-.104-1.031.023-1.031.145 0 .189.125.158.455-.023.246-.001.435.084.74.175.63.123.882-.232 1.125-.33.226-1.2.364-1.489.236zm4.373-1.005c-.109-.178-.112-.246-.112-2.565v-2.383l.137-.063c.373-.17.348-.336.348 2.373 0 2.376-.002 2.44-.113 2.628-.137.234-.123.233-.26.01zm.238-.979c0-.12-.076-.157-.183-.09-.102.065-.03.235.089.212.052-.01.094-.065.094-.122zm-.134.024c0-.03.025-.055.057-.055.031 0 .042.025.024.055-.019.03-.044.054-.058.054-.013 0-.023-.025-.023-.054zm.134-1.107c0-.12-.076-.158-.183-.09-.102.065-.03.234.089.211.052-.01.094-.065.094-.121zm-.134.023c0-.03.025-.054.057-.054.031 0 .042.024.024.054-.019.03-.044.054-.058.054-.013 0-.023-.024-.023-.054zm.134-1.107c0-.12-.076-.158-.183-.09-.102.065-.03.234.089.211.052-.01.094-.064.094-.121zm-.134.023c0-.03.025-.054.057-.054.031 0 .042.024.024.054-.019.03-.044.054-.058.054-.013 0-.023-.024-.023-.054zm-3.918 2.183c-.26-.033-.275-.084-.308-1.018l-.064-1.832c-.019-.53-.018-1.05.002-1.155l.035-.19.244.225c.568.527 1.602.567 2.515.1.259-.133.218-.198.381.604.367 1.803.307 2.195-.384 2.505-.301.135-.995.188-1.36.103-.282-.065-.322-.03-.323.28-.002.408-.1.458-.738.378zm-.745-2.532c-.758-.231-1.739-1.063-1.916-1.624-.14-.444.055-1.563.355-2.04.203-.324.248-.299.075.043-.393.78-.12 1.412.625 1.45.266.012.448.063.755.21l.405.193-.036.91c-.042 1.068-.002.937-.263.858zm3.613-.856c-.232-.724-.087-.927.701-.982 2.023-.143 3.237-1.306 2.612-2.502-.18-.345-.174-.394.042-.318.337.118.638.8.59 1.336-.08.896-.772 1.653-1.943 2.128-.595.241-.575.246-.575-.13 0-.369-.08-.428-.424-.315l-.196.065-.016.36c-.015.353-.018.36-.182.392-.277.056-.585.038-.609-.034zm-2.481-.334c-.09-.04-.313-.207-.497-.373-.44-.397-.948-.64-1.412-.676-.811-.062-1.033-.593-.595-1.42.333-.627.524-.678.933-.25.535.56 1.166.287 1.166-.505 0-.294.112-.317.56-.113.659.301 1.193.4 2.176.403.482.002.876.01.876.019a1.3 1.3 0 0 1-.116.173c-.109.148-.111.177-.046.484.278 1.319-.804 2.336-2.48 2.331-.222 0-.476-.033-.565-.073zm2.955-1.016c.157-.305.171-.377.171-.84 0-.49.004-.506.123-.506.186 0 .976-.42 1.15-.61.144-.16.645-.394.974-.457.297-.057.583.651.472 1.17-.176.825-1.182 1.389-2.755 1.546l-.306.03zm.144-1.488c0-.048.174-.384.386-.745.594-1.01.563-.953.409-.773a5.605 5.605 0 0 0-.387.582c-.227.384-.27.428-.416.428h-.164l.173-.312c.496-.896 1.153-1.548 1.53-1.52.28.02.31.137.115.421a1.848 1.848 0 0 0-.298.961c0 .395-.104.523-.652.799-.522.262-.696.302-.696.159zm-4.572-.231c-.14-.154-.328-.3-.416-.323-.185-.05-.363-.555-.336-.957l.014-.216.564-.016c.672-.019.823.032.998.335.516.896-.176 1.885-.824 1.177zm.939-1.112c-.194-.397-.345-.49-.814-.502l-.377-.01-.027-.36c-.022-.29-.051-.381-.149-.46-.216-.177-.15-.217.357-.217.672 0 .697.024 1.004.99.134.422.243.787.243.81 0 .125-.112.006-.237-.25z"
+            transform="translate(-84.672 -84.337)"></path>
+        </svg>
+      </CardProducts>
+      <!-- Memorials -->
+      <CardProducts
+        articlePara={products[2].paragraph}
+        articleTitle={products[2].productTitle}
+        svgFillLight="text-red-600"
+      >
+        <svg
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="size-12 md:size-14 lg:size-16"
+          fill="currentColor"
+          ><path
+            d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"
+          ></path></svg
+        >
+      </CardProducts>
+    </div>
+  </Section>
+
+  <!-- Product Details Section -->
+  <Section sectionTitle="Product Details">
+    <!-- Grid -->
+    <ProductDetails client:visible />
+  </Section>
+
+  <!-- Quality Process Section -->
+  <Section
+    sectionTitle="Quality Process"
+    bgLight="bg-gray-100"
+    bgDark="dark:bg-zinc-950"
+  >
+    <div
+      class="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <!-- Intro -->
+      <article
+        class="text-balance rounded-lg bg-gradient-to-tl from-emerald-400 to-green-300 p-8 text-xl font-bold capitalize shadow-lg shadow-emerald-500 dark:shadow-emerald-800 lg:text-2xl dark:from-emerald-700 dark:to-green-600"
+      >
+        <h3>Check out our articles to read about the complete process!</h3>
+      </article>
+      <!-- Polystyrene -->
+      <CardQualityProcess
+        subtitle={qualityProcess.polystyrene.subtitle}
+        paragraph={qualityProcess.polystyrene.paragraph}
+      >
+        <svg
+          aria-hidden="true"
+          class="absolute -top-5 left-6 rounded-full bg-gradient-to-t from-emerald-400 to-green-300 p-2 text-neutral-50 dark:from-emerald-700 dark:to-green-600"
+          fill="currentColor"
+          width="44px"
+          height="44px"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M16,4a1,1,0,0,0-1-1H9A1,1,0,0,0,8,4v7h8Z"></path>
+            <path d="M3,14v6a1,1,0,0,0,1,1h7V13H4A1,1,0,0,0,3,14Z"></path>
+            <path d="M20,13H13v8h7a1,1,0,0,0,1-1V14A1,1,0,0,0,20,13Z"></path>
+          </g>
+        </svg>
+      </CardQualityProcess>
+      <!-- Sealing -->
+      <CardQualityProcess
+        subtitle={qualityProcess.sealing.subtitle}
+        paragraph={qualityProcess.sealing.paragraph}
+      >
+        <svg
+          aria-hidden="true"
+          class="absolute -top-5 left-6 rounded-full bg-gradient-to-t from-emerald-400 to-green-300 p-2 text-neutral-50 dark:from-emerald-700 dark:to-green-600"
+          version="1.1"
+          id="Uploaded to svgrepo.com"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          fill="currentColor"
+          width="44px"
+          height="44px"
+          viewBox="0 0 32 32"
+          xml:space="preserve"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <style type="text/css">
+              .stone_een {
+                fill:;
+              }
+            </style>
+            <path
+              class="stone_een"
+              d="M23.342,11.171L21,10H11l-2.342,1.171C7.642,11.679,7,12.718,7,13.854V29c0,1.657,1.343,3,3,3h12 c1.657,0,3-1.343,3-3V13.854C25,12.718,24.358,11.679,23.342,11.171z M21,27c0,0.552-0.448,1-1,1h-8c-0.552,0-1-0.448-1-1V16 c0-0.552,0.448-1,1-1h8c0.552,0,1,0.448,1,1V27z M19.632,6h-7.248C12.851,3.865,13.738,0.692,15,0h2 C18.302,0.692,19.178,3.865,19.632,6z M11,9V8c0-0.552,0.448-1,1-1h0.177h7.653H20c0.552,0,1,0.448,1,1v1H11z M12,16h8v11h-8V16z"
+            ></path>
+          </g>
+        </svg>
+      </CardQualityProcess>
+      <!-- Bouquets -->
+      <article
+        class=`relative bg-white grid gap-y-${ARTICLE_GAP} rounded-lg p-8 shadow-lg md:p-8 dark:shadow-neutral-700 dark:bg-neutral-900`
+      >
+        <svg
+          aria-hidden="true"
+          class="absolute -top-5 left-6 rounded-full bg-gradient-to-t from-emerald-400 to-green-300 p-2 text-neutral-50 dark:from-emerald-700 dark:to-green-600"
+          fill="currentColor"
+          height="44px"
+          width="44px"
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 491.85 491.85"
+          xml:space="preserve"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g>
+              <path
+                d="M264.574,340.433v-59.918c-5.261,1.46-10.716,2.454-16.436,2.454c-6.526,0-12.754-1.174-18.665-3.056v60.511 c-18.54-43.119-41.973-75.961-63.598-100.116c-2.978,0.508-5.992,0.86-9.063,0.86c-3.903,0-7.783-0.423-11.573-1.26 c-2.284,7.164-6.134,13.585-10.971,19.119c36.572,41.588,82.989,113.643,94.104,220.083c0.756,7.228,6.852,12.739,14.122,12.739 h9.052c7.293,0,13.374-5.495,14.121-12.747c8.594-82.739,38.067-144.32,67.865-187.238c-12.992-0.365-25.242-5.417-34.699-13.895 C286.675,295.876,274.857,316.519,264.574,340.433z"
+              ></path>
+              <path
+                d="M476.376,212.125c-5.437-3.141-16.987-7.526-29.598-10.94c12.61-3.422,24.153-7.8,29.592-10.941 c14.135-8.168,18.98-26.241,10.818-40.378c-5.471-9.477-15.407-14.778-25.616-14.778c-5.018,0-10.104,1.276-14.762,3.968 c-5.438,3.132-15.005,10.932-24.249,20.121c3.341-12.609,5.301-24.797,5.301-31.069c0-16.329-13.213-29.559-29.543-29.559 c-4.033,0-7.872,0.82-11.374,2.281c-3.29,11.028-9.365,20.776-17.774,28.322c14.579,13.124,21.649,32.341,19.995,51.419 c2.798-1.243,5.878-1.965,9.137-1.965c12.474,0,22.587,10.114,22.587,22.579c0,12.458-10.113,22.578-22.587,22.578 c-8.938,0-16.596-5.246-20.254-12.783c-11.529,16.13-30.255,26.012-50.317,26.012c-6.48,0-12.932-1.036-19.077-3.034 c-0.643,3.029-1.604,5.934-2.674,8.782c0.576,3.345,1.639,6.659,3.436,9.771c5.47,9.479,15.408,14.779,25.617,14.779 c5.018,0,10.104-1.276,14.753-3.967c5.455-3.141,15.038-10.964,24.299-20.17c-3.35,12.619-5.324,24.829-5.324,31.117 c0,16.322,13.227,29.551,29.558,29.551c16.33,0,29.543-13.229,29.543-29.551c0-6.28-1.96-18.481-5.31-31.1 c9.253,9.205,18.828,17.012,24.258,20.153c4.658,2.691,9.744,3.967,14.756,3.967c10.224,0,20.151-5.3,25.632-14.779 C495.358,238.365,490.513,220.294,476.376,212.125z"
+              ></path>
+              <path
+                d="M108.739,99.183c-3.969-14.778-2.141-30.082,4.67-43.632c-5.251-4.793-12.175-7.791-19.851-7.791 c-16.322,0-29.552,13.229-29.552,29.551c0,6.288,1.977,18.481,5.317,31.1c-9.261-9.205-18.844-17.018-24.282-20.161 c-4.649-2.69-9.735-3.958-14.745-3.968c-10.217,0-20.153,5.302-25.633,14.788c-8.167,14.137-3.325,32.21,10.821,40.37 c5.444,3.142,16.987,7.535,29.598,10.949c-12.618,3.413-24.161,7.799-29.607,10.939c-14.137,8.177-18.988,26.249-10.818,40.387 c5.47,9.479,15.413,14.786,25.632,14.786c5.012,0,10.095-1.276,14.747-3.967c5.444-3.148,15.027-10.964,24.297-20.178 c-3.35,12.626-5.326,24.828-5.326,31.117c0,16.321,13.229,29.559,29.552,29.559c16.328,0,29.549-13.237,29.549-29.559 c0-1.858-0.222-4.347-0.551-7.099c-2.849-3.163-5.479-6.549-7.648-10.308c-6.51-11.267-8.84-23.73-7.857-35.816 c-3.851,2.627-8.498,4.17-13.509,4.17c-13.262,0-24.009-10.772-24.009-24.024c0-13.261,10.747-24.034,24.009-24.034 c10.505,0,19.34,6.795,22.604,16.189c3.019-4.87,6.563-9.459,10.938-13.4C118.248,121.231,111.88,110.91,108.739,99.183z"
+              ></path>
+              <path
+                d="M136.272,193.724c6.893,11.928,19.391,18.602,32.243,18.602c6.314,0,12.714-1.614,18.57-4.996 c6.844-3.952,18.908-13.792,30.564-25.383c-4.208,15.896-6.699,31.246-6.699,39.158c0,20.532,16.65,37.188,37.188,37.188 c20.549,0,37.183-16.656,37.183-37.188c0-7.904-2.475-23.246-6.684-39.133c11.646,11.583,23.697,21.406,30.531,25.357 c5.855,3.382,12.258,4.987,18.563,4.987c12.859,0,25.358-6.665,32.241-18.593c10.273-17.792,4.178-40.532-13.615-50.813 c-6.843-3.951-21.373-9.462-37.228-13.759c15.855-4.313,30.376-9.824,37.22-13.776c17.784-10.274,23.889-33.022,13.615-50.804 c-6.884-11.928-19.381-18.595-32.233-18.595c-6.305,0-12.708,1.606-18.57,4.987c-6.836,3.944-18.877,13.76-30.515,25.327 c4.2-15.872,6.675-31.205,6.675-39.094C285.321,16.651,268.687,0,248.138,0C227.6,0,210.95,16.651,210.95,37.196 c0,7.897,2.491,23.247,6.69,39.125c-11.646-11.582-23.703-21.414-30.547-25.366c-5.856-3.38-12.257-4.988-18.563-4.988 c-12.86,0-25.357,6.668-32.249,18.603c-10.273,17.782-4.169,40.53,13.623,50.796c6.844,3.952,21.374,9.471,37.237,13.775 c-15.872,4.297-30.402,9.816-37.245,13.767C132.105,153.2,126,175.939,136.272,193.724z M248.125,91.326 c20.883,0,37.807,16.948,37.807,37.825c0,20.868-16.924,37.808-37.807,37.808c-20.878,0-37.802-16.939-37.802-37.808 C210.323,108.274,227.247,91.326,248.125,91.326z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <h3 class="text-lg font-semibold">Bouquets</h3>
+        <p class="text-pretty md:text-lg">
+          Each flower is glued on the base. The bouquets can be moved to another
+          vase. Learn more about our <a
+            href="/articles/diy-cemetery-bouquet"
+            class="rounded font-bold underline underline-offset-4 focus-within:bg-green-200 hover:bg-green-200 dark:focus-within:bg-neutral-800 dark:hover:bg-neutral-800"
+            aria-label="diy cemetery bouquet">cemetery bouquets</a
+          >.
+        </p>
+      </article>
+      <!-- Saddles -->
+      <CardQualityProcess
+        subtitle={qualityProcess.saddles.subtitle}
+        paragraph={qualityProcess.saddles.paragraph}
+      >
+        <svg
+          aria-hidden="true"
+          class="absolute -top-5 left-6 rounded-full bg-gradient-to-t from-emerald-400 to-green-300 p-2 text-neutral-50 dark:from-emerald-700 dark:to-green-600"
+          fill="currentColor"
+          width="44"
+          height="44"
+          viewBox="0 0 9.525 11.112"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            style="stroke:none;stroke-width:.204271"
+            d="M86.82 95.4c-.575-.256-.683-.818-.321-1.669.118-.279.215-.565.215-.635 0-.19.105-.456.193-.49.17-.066.097.62-.112 1.058-.378.793-.087 1.25.788 1.234.707-.012.839-.207.693-1.023-.113-.63-.104-1.031.023-1.031.145 0 .189.125.158.455-.023.246-.001.435.084.74.175.63.123.882-.232 1.125-.33.226-1.2.364-1.489.236zm4.373-1.005c-.109-.178-.112-.246-.112-2.565v-2.383l.137-.063c.373-.17.348-.336.348 2.373 0 2.376-.002 2.44-.113 2.628-.137.234-.123.233-.26.01zm.238-.979c0-.12-.076-.157-.183-.09-.102.065-.03.235.089.212.052-.01.094-.065.094-.122zm-.134.024c0-.03.025-.055.057-.055.031 0 .042.025.024.055-.019.03-.044.054-.058.054-.013 0-.023-.025-.023-.054zm.134-1.107c0-.12-.076-.158-.183-.09-.102.065-.03.234.089.211.052-.01.094-.065.094-.121zm-.134.023c0-.03.025-.054.057-.054.031 0 .042.024.024.054-.019.03-.044.054-.058.054-.013 0-.023-.024-.023-.054zm.134-1.107c0-.12-.076-.158-.183-.09-.102.065-.03.234.089.211.052-.01.094-.064.094-.121zm-.134.023c0-.03.025-.054.057-.054.031 0 .042.024.024.054-.019.03-.044.054-.058.054-.013 0-.023-.024-.023-.054zm-3.918 2.183c-.26-.033-.275-.084-.308-1.018l-.064-1.832c-.019-.53-.018-1.05.002-1.155l.035-.19.244.225c.568.527 1.602.567 2.515.1.259-.133.218-.198.381.604.367 1.803.307 2.195-.384 2.505-.301.135-.995.188-1.36.103-.282-.065-.322-.03-.323.28-.002.408-.1.458-.738.378zm-.745-2.532c-.758-.231-1.739-1.063-1.916-1.624-.14-.444.055-1.563.355-2.04.203-.324.248-.299.075.043-.393.78-.12 1.412.625 1.45.266.012.448.063.755.21l.405.193-.036.91c-.042 1.068-.002.937-.263.858zm3.613-.856c-.232-.724-.087-.927.701-.982 2.023-.143 3.237-1.306 2.612-2.502-.18-.345-.174-.394.042-.318.337.118.638.8.59 1.336-.08.896-.772 1.653-1.943 2.128-.595.241-.575.246-.575-.13 0-.369-.08-.428-.424-.315l-.196.065-.016.36c-.015.353-.018.36-.182.392-.277.056-.585.038-.609-.034zm-2.481-.334c-.09-.04-.313-.207-.497-.373-.44-.397-.948-.64-1.412-.676-.811-.062-1.033-.593-.595-1.42.333-.627.524-.678.933-.25.535.56 1.166.287 1.166-.505 0-.294.112-.317.56-.113.659.301 1.193.4 2.176.403.482.002.876.01.876.019a1.3 1.3 0 0 1-.116.173c-.109.148-.111.177-.046.484.278 1.319-.804 2.336-2.48 2.331-.222 0-.476-.033-.565-.073zm2.955-1.016c.157-.305.171-.377.171-.84 0-.49.004-.506.123-.506.186 0 .976-.42 1.15-.61.144-.16.645-.394.974-.457.297-.057.583.651.472 1.17-.176.825-1.182 1.389-2.755 1.546l-.306.03zm.144-1.488c0-.048.174-.384.386-.745.594-1.01.563-.953.409-.773a5.605 5.605 0 0 0-.387.582c-.227.384-.27.428-.416.428h-.164l.173-.312c.496-.896 1.153-1.548 1.53-1.52.28.02.31.137.115.421a1.848 1.848 0 0 0-.298.961c0 .395-.104.523-.652.799-.522.262-.696.302-.696.159zm-4.572-.231c-.14-.154-.328-.3-.416-.323-.185-.05-.363-.555-.336-.957l.014-.216.564-.016c.672-.019.823.032.998.335.516.896-.176 1.885-.824 1.177zm.939-1.112c-.194-.397-.345-.49-.814-.502l-.377-.01-.027-.36c-.022-.29-.051-.381-.149-.46-.216-.177-.15-.217.357-.217.672 0 .697.024 1.004.99.134.422.243.787.243.81 0 .125-.112.006-.237-.25z"
+            transform="translate(-84.672 -84.337)"></path>
+        </svg>
+      </CardQualityProcess>
+      <!-- Memorials -->
+      <article
+        class=`relative bg-white grid gap-y-${ARTICLE_GAP} rounded-lg p-8 shadow-lg md:p-8 dark:shadow-neutral-700 dark:bg-neutral-900`
+      >
+        <svg
+          aria-hidden="true"
+          class="absolute -top-5 left-6 rounded-full bg-gradient-to-t from-emerald-400 to-green-300 p-2 text-neutral-50 dark:from-emerald-700 dark:to-green-600"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="44"
+          height="44"
+          fill="currentColor"
+          ><path
+            d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"
+          ></path></svg
+        >
+        <h3 class="text-lg font-semibold">Memorials</h3>
+        <p class="text-pretty md:text-lg">
+          An outline is created and traced with a hotwire. The polystyrene base
+          is sealed and flowers are glued. Learn how to create a <a
+            class="rounded font-bold underline underline-offset-4 focus-within:bg-green-200 hover:bg-green-200 dark:focus-within:bg-neutral-800 dark:hover:bg-neutral-800"
+            href="/articles/diy-heart-arrangement"
+            aria-label="diy heart arrangement">heart design</a
+          >.
+        </p>
+      </article>
+    </div>
+  </Section>
+
+  <!-- Purchasing Section -->
+  <Section
+    sectionTitle="Purchasing"
+    bgDark=""
+    bgLight=""
+    gradientDirection="bg-gradient-to-tl"
+    gradientStart="from-emerald-400"
+    gradientEnd="to-green-300"
+    darkGradientStart="dark:from-emerald-700"
+    darkGradientEnd="dark:to-green-600"
+  >
+    <!-- Grid -->
+    <GridTwoColsText>
+      <!-- Gallery -->
+      <article class=`grid max-w-[500px] gap-${ARTICLE_GAP}`>
+        <h3 class="flex items-center gap-4 text-xl md:text-2xl font-semibold">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            height="24"
+            width="24"
+            viewBox="0 0 512 512"
+          >
+            <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+              d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l96 0 32 0 208 0c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"
+            ></path>
+          </svg>
+
+          Gallery
+        </h3>
+        <p class="text-pretty md:text-lg">
+          Explore our gallery page to view a selection of past designs,
+          showcasing the artistry and attention to detail that goes into every
+          arrangement. Find inspiration and discover the perfect floral tribute
+          for your needs.
+        </p>
+        <a
+          href="/gallery/"
+          class="max-w-fit underline underline-offset-4 rounded-md font-bold hover:bg-green-200 dark:hover:bg-green-800 focus-visible:bg-green-500 dark:focus-visible:bg-green-800 md:text-lg"
+          >View Gallery</a
+        >
+      </article>
+      <!-- Shop -->
+      <article class=`grid max-w-[500px] gap-${ARTICLE_GAP}`>
+        <h3 class="flex items-center gap-3 text-2xl font-semibold">
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            height="24"
+            width="24"
+          >
+            <path
+              d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z"
+              clip-rule="evenodd"></path>
+          </svg>
+
+          Shop
+        </h3>
+        <p class="text-pretty md:text-lg">
+          To browse our latest collection of floral arrangements, visit our eBay
+          store. Discover a variety of beautiful, handcrafted designs available
+          for immediate purchase. All purchases come with free shipping via UPS
+          and USPS!
+        </p>
+        <a
+          href="https://www.ebay.com/usr/rosyarc"
+          target="_blank"
+          rel="noopener"
+          class="max-w-fit underline underline-offset-4 rounded-md font-bold hover:bg-green-200 dark:hover:bg-green-800 focus-visible:bg-green-500 dark:focus-visible:bg-green-800 md:text-lg"
+          >Shop Inventory</a
+        >
+      </article>
+    </GridTwoColsText>
+  </Section>
+
+  <!-- Reviews Section -->
+  <ReviewGrid />
+</MainLayout>

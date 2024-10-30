@@ -1,0 +1,95 @@
+<aside
+  class="not-prose fixed right-0 md:right-4 lg:right-0 top-[110px] flex px-2 lg:px-0"
+>
+  <div
+    id="toc"
+    class="hidden grid lg:grid gap-4 rounded-md mt-5 lg:mt-0 bg-white p-4 font-bold shadow-xl dark:bg-neutral-900 dark:shadow-neutral-800"
+  >
+    <header
+      class="flex justify-between text-lg lg:text-xl underline underline-offset-4 dark:text-white"
+    >
+      Table of Contents
+    </header>
+    <slot />
+  </div>
+
+  <button
+    aria-controls="toc"
+    aria-expanded="false"
+    class="rounded-full px-4 py-2 z-10 w-min h-min bg-neutral-50 dark:bg-neutral-800 lg:hidden hover:bg-neutral-200 dark:hover:bg-neutral-700"
+  >
+    <svg
+      class="dark:text-neutral-50"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      height="26"
+      width="6"
+      viewBox="0 0 128 512"
+      ><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
+      ></path></svg
+    >
+    <span class="sr-only">Table Of Contents</span>
+  </button>
+</aside>
+
+<script>
+  const trapFocus = (button: HTMLButtonElement, array: HTMLElement[]) => {
+    let counter = 0;
+    const first = 0,
+      last = array.length - 1;
+
+    document.onkeydown = (e) => {
+      if (e.key === "Tab" && e.shiftKey) {
+        counter === first ? (counter = last) : --counter;
+        array[counter].focus();
+        e.preventDefault();
+      } else if (e.key === "Tab") {
+        counter === last ? (counter = first) : ++counter;
+        array[counter].focus();
+        e.preventDefault();
+      }
+      if (e.key === "Escape") button.click();
+    };
+  };
+
+  document.addEventListener("astro:page-load", () => {
+    const tocDivEl = (document.getElementById("toc") as HTMLDivElement) || null;
+    const tocButtonEl =
+      (document.querySelector(
+        "button[aria-controls='toc']"
+      ) as HTMLButtonElement) || null;
+
+    // Hide div on button click
+    if (tocButtonEl && tocDivEl) {
+      tocButtonEl.onclick = () => {
+        const isExpanded = tocButtonEl.ariaExpanded === "true";
+        tocButtonEl.ariaExpanded = isExpanded ? "false" : "true";
+        tocDivEl.classList.toggle("hidden");
+
+        const largeScreen = 1024;
+
+        if (!isExpanded && window.innerWidth < largeScreen) {
+          const tocLinks =
+            (tocDivEl.querySelectorAll("a") as NodeListOf<HTMLAnchorElement>) ||
+            null;
+          const areaFocus = [tocButtonEl, ...tocLinks] as Array<HTMLElement>;
+          trapFocus(tocButtonEl, areaFocus);
+
+          // Hide div when clicking outside of div
+          document.onclick = (e) => {
+            const target = (e.target as Node) || null;
+            const isTarget =
+              tocDivEl.contains(target) || tocButtonEl.contains(target);
+
+            if (!isTarget) tocButtonEl.click();
+          };
+        } else {
+          document.onclick = null;
+          document.onkeydown = null;
+        }
+      };
+    }
+  });
+</script>

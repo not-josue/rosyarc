@@ -1,0 +1,49 @@
+---
+interface Props {
+  bgLight?: string;
+  bgDark?: string;
+  sectionTitle: string;
+  gradientDirection?: string;
+  gradientStart?: string;
+  gradientVia?: string;
+  gradientEnd?: string;
+  darkGradientStart?: string;
+  darkGradientVia?: string;
+  darkGradientEnd?: string;
+}
+
+const {
+  sectionTitle,
+  bgDark = "dark:bg-neutral-900",
+  bgLight = "bg-white",
+  gradientDirection = "",
+  gradientStart = "",
+  gradientVia = "",
+  gradientEnd = "",
+  darkGradientStart = "",
+  darkGradientVia = "",
+  darkGradientEnd = "",
+} = Astro.props as Props;
+---
+
+<section
+  class:list={{
+    "p-8 md:p-12 lg:p-16": true,
+    [bgDark]: !!bgDark,
+    [bgLight]: !!bgLight,
+    [gradientDirection]: !!gradientDirection,
+    [gradientStart]: !!gradientStart,
+    [gradientVia]: !!gradientVia,
+    [gradientEnd]: !!gradientEnd,
+    [darkGradientStart]: !!darkGradientStart,
+    [darkGradientVia]: !!darkGradientVia,
+    [darkGradientEnd]: !!darkGradientEnd,
+  }}
+>
+  <header
+    class="mb-8 text-balance text-center text-3xl font-bold md:mb-12 md:text-4xl lg:mb-16 lg:text-5xl"
+  >
+    <h2>{sectionTitle}</h2>
+  </header>
+  <slot />
+</section>
